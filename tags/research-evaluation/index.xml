@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research Evaluation | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/tags/research-evaluation/</link>
+      <atom:link href="https://skonkiel.github.io/tags/research-evaluation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Research Evaluation</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Research Evaluation</title>
+      <link>https://skonkiel.github.io/tags/research-evaluation/</link>
+    </image>
+    
+    <item>
+      <title>Metrics Toolkit: an online evidence-based resource for navigating the research metrics landscape</title>
+      <link>https://skonkiel.github.io/publication/champieux-metrics-2018/</link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/publication/champieux-metrics-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sarah Sutton | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/authors/sarah-sutton/</link>
+      <atom:link href="https://skonkiel.github.io/authors/sarah-sutton/index.xml" rel="self" type="application/rss+xml" />
+    <description>Sarah Sutton</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Sarah Sutton</title>
+      <link>https://skonkiel.github.io/authors/sarah-sutton/</link>
+    </image>
+    
+    <item>
+      <title>Awareness of Altmetrics among LIS Scholars and Faculty</title>
+      <link>https://skonkiel.github.io/publication/sutton-awareness-2018/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/publication/sutton-awareness-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

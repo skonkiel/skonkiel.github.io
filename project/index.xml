@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/project/</link>
+      <atom:link href="https://skonkiel.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Projects</title>
+      <link>https://skonkiel.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Metrics Toolkit</title>
+      <link>https://skonkiel.github.io/project/metrics-toolkit/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/project/metrics-toolkit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HuMetricsHSS</title>
+      <link>https://skonkiel.github.io/project/humetricshss/</link>
+      <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/project/humetricshss/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

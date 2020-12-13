@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/talk/</link>
+      <atom:link href="https://skonkiel.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <description>Talks</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Talks</title>
+      <link>https://skonkiel.github.io/talk/</link>
+    </image>
+    
+    <item>
+      <title>Altmetrics: The state of the art for publication planning</title>
+      <link>https://skonkiel.github.io/talk/ismpp-u-2020/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/ismpp-u-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data-intensive approaches to finding and predicting research outcomes for New Zealand health research</title>
+      <link>https://skonkiel.github.io/talk/eresearchnz-2020/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/eresearchnz-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Working with the Dimensions and Altmetric APIs to search, visualize, and integrate research information across library systems</title>
+      <link>https://skonkiel.github.io/talk/erl-2019/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/erl-2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Measuring knowledge mobilization for Nordic research using patent and policy indicators</title>
+      <link>https://skonkiel.github.io/talk/nordic-bibliometrics-2019/</link>
+      <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/nordic-bibliometrics-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

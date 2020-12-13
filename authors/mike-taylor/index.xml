@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mike Taylor | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/authors/mike-taylor/</link>
+      <atom:link href="https://skonkiel.github.io/authors/mike-taylor/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mike Taylor</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 08 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Mike Taylor</title>
+      <link>https://skonkiel.github.io/authors/mike-taylor/</link>
+    </image>
+    
+    <item>
+      <title>Measuring knowledge mobilization for Nordic research using patent and policy indicators</title>
+      <link>https://skonkiel.github.io/talk/nordic-bibliometrics-2019/</link>
+      <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/nordic-bibliometrics-2019/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

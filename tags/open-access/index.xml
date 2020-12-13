@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>open access | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/tags/open-access/</link>
+      <atom:link href="https://skonkiel.github.io/tags/open-access/index.xml" rel="self" type="application/rss+xml" />
+    <description>open access</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>open access</title>
+      <link>https://skonkiel.github.io/tags/open-access/</link>
+    </image>
+    
+    <item>
+      <title>Imperative for Open Altmetrics</title>
+      <link>https://skonkiel.github.io/publication/konkiel-imperative-2014/</link>
+      <pubDate>Mon, 01 Sep 2014 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/publication/konkiel-imperative-2014/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
