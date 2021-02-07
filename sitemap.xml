@@ -3,12 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://skonkiel.github.io/publication_types/2/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
+    <loc>https://skonkiel.github.io/authors/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://skonkiel.github.io/authors/</loc>
+    <loc>https://skonkiel.github.io/project/mn-wind-power/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skonkiel.github.io/project/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skonkiel.github.io/authors/stacy-konkiel/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skonkiel.github.io/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skonkiel.github.io/publication_types/2/</loc>
     <lastmod>2020-12-13T11:50:36-06:00</lastmod>
   </url>
   
@@ -49,16 +69,6 @@
   
   <url>
     <loc>https://skonkiel.github.io/authors/simone-sacchi/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/stacy-konkiel/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/</loc>
     <lastmod>2020-12-13T11:50:36-06:00</lastmod>
   </url>
   
@@ -109,11 +119,6 @@
   
   <url>
     <loc>https://skonkiel.github.io/project/metrics-toolkit/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/project/</loc>
     <lastmod>2020-04-11T00:00:00+00:00</lastmod>
   </url>
   

@@ -5,12 +5,20 @@
     <link>https://skonkiel.github.io/</link>
       <atom:link href="https://skonkiel.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Stacy R Konkiel</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Stacy R Konkiel</title>
       <link>https://skonkiel.github.io/</link>
     </image>
+    
+    <item>
+      <title>Minnesota Wind Power</title>
+      <link>https://skonkiel.github.io/project/mn-wind-power/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/project/mn-wind-power/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>The transformative power of values-enacted scholarship</title>
