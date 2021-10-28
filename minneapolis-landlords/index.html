@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner and alias (coming soon!) Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit." />
+  <meta name="description" content="Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner name, alias, and address Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://skonkiel.github.io/minneapolis-landlords/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Stacy R Konkiel" />
   <meta property="og:url" content="https://skonkiel.github.io/minneapolis-landlords/" />
   <meta property="og:title" content="Minneapolis landlord dataset and dashboard | Stacy R Konkiel" />
-  <meta property="og:description" content="Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner and alias (coming soon!) Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit." /><meta property="og:image" content="https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner name, alias, and address Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit." /><meta property="og:image" content="https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -348,7 +348,7 @@
       "url": "https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner and alias (coming soon!) Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit."
+  "description": "Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner name, alias, and address Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit."
 }
 </script>
 
@@ -736,7 +736,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -772,25 +772,25 @@
     <div class="article-style">
       <ul>
 <li><a href="https://github.com/skonkiel/mpls_landlords" target="_blank" rel="noopener">Download the 2020 Minneapolis landlord dataset</a>: properties owned, aliases, valuation, and more</li>
-<li><a href="#">Searchable landlord dashboard</a>: Search based on owner and alias (coming soon!)</li>
+<li><a href="https://public.tableau.com/views/MinneapolisAssessorData2020-Landlords/Dashboard2?:language=en-US&amp;publish=yes&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener">Searchable landlord dashboard</a>: Search based on owner name, alias, and address</li>
 <li><a href="https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/" target="_blank" rel="noopener">Vote yes on 3, yes on rent control for Minneapolis on November 2</a></li>
 </ul>
 <p>Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit.</p>
-<p>After a frustrating experience trying to buy my first home last year&ndash;and disappointment in the pushback against the 2021 Minneapolis ballot question on rent control&ndash;I thought I&rsquo;d provide a data-driven analysis of the scale of profiteering that&rsquo;s happening on the backs of the average Minneapolis renter, which is at the same time making it harder for people like me to buy a home.</p>
-<p>As a former renter, I also want to provide a dataset to other renters and advocacy groups that makes it a lot easier to find out who owns rental properties in your neighborhood.</p>
+<p>After a frustrating experience trying to buy my first home last year&ndash;and disappointment in the pushback against the 2021 Minneapolis ballot question on rent control&ndash;I thought I&rsquo;d provide a data-driven analysis of the scale of profiteering that&rsquo;s happening on the backs of the average Minneapolis renter, which is at the same time making it harder for people like me to buy a home. These things are related. The root cause is a system that takes housing, a human right, and exploits it for profit.</p>
+<p>Despite my newfound status as a property owner, I have a lot more in common with the average Minneapolis renter than I do with landlords. That&rsquo;s why I&rsquo;m providing a dataset to other renters and advocacy groups that makes it a lot easier to find out who owns rental properties in your neighborhood.</p>
 <p>What follows is a back of napkin analysis underpinned by a (much more valuable) public dataset of Minneapolis landlords from 2020, which I&rsquo;ve put a LOT of time into cleaning and normalizing.</p>
 <p>Read on and then VOTE YES ON 3.</p>
 <h2 id="fighting-the-llc-problem-through-data-munging">Fighting the &ldquo;LLC problem&rdquo; through data munging</h2>
 <p>Inspiration for this project comes from <a href="https://findmylandlord.chicagodsa.org/" target="_blank" rel="noopener">Find My Landlord website</a>, which aims to connect Chicago landlords to the shell companies and LLCs they use to avoid liability and, in some cases, accountability.</p>
 <p>As that project so expertly illustrates, there&rsquo;s a well known &ldquo;LLC problem&rdquo; among housing advocates who want to learn who owns a building. Individuals and corporations that own many buildings at once tend to protect their assets by creating different LLCs for each building they own, so if they get sued, only that building is &ldquo;in danger&rdquo;. They sometimes even file taxes under multiple business names in order to obsfucate the fact that they own multiple rental properties. (Read on for an example of this in action.)</p>
 <p>To help local housing advocates overcome the LLC problem, I decided to do some hard-core data munging. I downloaded Assessor Parcel data for 2020 from the <a href="https://opendata.minneapolismn.gov/" target="_blank" rel="noopener">Open Minneapolis</a> portal. This file lists the owners, taxpayers, value, and characteristics of all Minneapolis parcels and buildings.</p>
-<p>I cleaned the hell out of the data and then applied some techniques* in <a href="https://openrefine.org/" target="_blank" rel="noopener">Open Refine</a> to find common owners of properties that were registered to many different LLCs and, in some cases, family members. I also ran an analysis on the results, which I share the headline findings of below.</p>
+<p>I cleaned the hell out of the data and then applied some techniques* in <a href="https://openrefine.org/" target="_blank" rel="noopener">Open Refine</a> to find common owners of residential rental properties that were registered to many different LLCs and, in some cases, family members. I also ran an analysis on the results, which I share the headline findings of below.</p>
 <p>Disclaimer: This data was manually reviewed and cleaned to the best of my ability. There may be mistakes and/or omissions.</p>
 <h2 id="what-the-data-reveals">What the data reveals</h2>
 <h3 id="one-in-five-single-family-minneapolis-homes-is-rented-for-profit">One in five single family Minneapolis homes is rented for profit</h3>
-<p>Of the 74,689 single-family homes in Minneapolis, 13,572 are rental properties. 2,545 of these rental properties are owned by what I&rsquo;ll call &ldquo;corporate landlords&rdquo;—those who own four or more rental properties, who make a living off of renters. These are properties that could otherwise be on the market to would-be buyers who are having <a href="https://minnesota.cbslocal.com/2021/09/21/twin-cities-housing-shortage/" target="_blank" rel="noopener">a hell of a time finding houses</a>, especially lower-income buyers who are currently priced out of the market.</p>
+<p>Of the 74,689 single-family homes in Minneapolis, 13,572 are rental properties. 2,545 of these rental properties are owned by what I&rsquo;ll call &ldquo;corporate landlords&rdquo;—those who own four or more rental properties, who make their living off of renters. These are properties that could otherwise be on the market for would-be buyers who are having <a href="https://minnesota.cbslocal.com/2021/09/21/twin-cities-housing-shortage/" target="_blank" rel="noopener">a hell of a time finding houses</a>, especially lower-income buyers who are currently priced out of the market.</p>
 <h3 id="minneapolis-landlords-are-hiding-their-identities-to-an-alarming-extent">Minneapolis landlords are hiding their identities to an alarming extent</h3>
-<p>There are 852 Minneapolis landlords who have registered their properties to multiple organizations: 2,961 third-parties (typically LLCs and family members) total, in many cases hiding their ownership from tenants.</p>
+<p>There are 852 Minneapolis landlords who have registered their properties to multiple aliases: 2,961 third-parties (typically LLCs and family members) total or 3.5 aliases per owner on average, in many cases hiding their ownership from tenants.</p>
 <p>Here&rsquo;s an example of this trickery in action—many different LLCs registered to a single family of rental property owners:</p>
 <p>
 
@@ -822,6 +822,7 @@
 </p>
 <p>This purposeful obsfucation <a href="https://www.startribune.com/north-minneapolis-renters-wage-a-fight-with-private-equity-landlords/600062754/" target="_blank" rel="noopener">makes it difficult for tenants to hold owners accountable</a>. How is this legal?</p>
 <h3 id="private-equity-and-local-profiteers-are-making-a-killing-on-minneapolis-renters">Private equity and local profiteers are making a killing on Minneapolis renters</h3>
+<p>Collectively, Minneapolis landlords collect rent on 114,203 rental units across the city. With an average rent of $1,455, that&rsquo;s a whopping $166 million exiting renters pockets each month and going to landlords, rather than one&rsquo;s own mortgage.</p>
 <p>The top twenty landlords (by number of properties owned) collectively own over 1,600 rental properties in Minneapolis.</p>
 <p>
 
@@ -851,8 +852,7 @@
                loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<p>Though some of the top property owners are nonprofits like Project for Pride in Living, more often they are companies like Front Yard Residential Corporation and investment funds like Carpathain Capital Management.</p>
-<p>Collectively, Minneapolis landlords collect rent on 114,203 rental units across the city. With an average rent of $1,455, that&rsquo;s a whopping $166 million exiting renters pockets each month and going to landlords, rather than one&rsquo;s own mortgage.</p>
+<p>Though some of the top property owners are nonprofits like Project for Pride in Living, more often they are companies like Front Yard Residential Corporation and investment funds like Carpathain Capital Management. Not exactly the picture of &ldquo;mom and pop&rdquo; landlords that the industry would have you believe. Definitely not who I&rsquo;d want as a landlord.</p>
 <h3 id="the-working-class-cant-build-wealth-if-minneapolis-landlords-own-all-the-property">The working class can&rsquo;t build wealth if Minneapolis landlords own all the property</h3>
 <p>Home ownership is an excellent way for families to build wealth. Disparities in wealth along racial lines are often tied to similar disparities in homeownership rates, which in Minneapolis were historically caused by <a href="https://www.minnpost.com/metro/2019/02/with-covenants-racism-was-written-into-minneapolis-housing-the-scars-are-still-visible/" target="_blank" rel="noopener">racist redlining practices</a>.</p>
 <p>With that in mind, consider this: Minneapolis landlords own rental properties worth more than $19 billion dollars (as valued by the city&rsquo;s assessor office). Imagine if some of those properties could be owned by families instead! It could go a long way towards addressing inequity.</p>
@@ -864,10 +864,11 @@
 <p>If you&rsquo;re as frustrated as I am by the extent to which landlords are winning out over the rest of us, go vote.</p>
 <p>Same day voter registration is available, as is early voting. Check out the <a href="https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/" target="_blank" rel="noopener">Election Links at the top of the Star Tribune&rsquo;s election guide</a> for info on registration, finding your polling place, and more.</p>
 <h2 id="dig-into-the-data">Dig into the data</h2>
-<p>I&rsquo;ve archived on Github <a href="https://github.com/skonkiel/mpls_landlords" target="_blank" rel="noopener">a derivative of the 2020 Minneapolis Assessor Parcel dataset that includes rental properties, their likely owners, and the aliases they use</a>. You can download it as a spreadsheet by following <a href="https://github.com/skonkiel/mpls_landlords/blob/master/data/final_landlords.csv" target="_blank" rel="noopener">this link</a>. <!-- You can also search for owners of a particular address or alias in this dashboard. --></p>
-<p>I&rsquo;ve removed owners' addresses from the dataset because doxxing is bad karma. If you need to find contact information for a specific LLC that owns a rental property in order to advocate for yourself or others, <a href="OpenCorporates.com">OpenCorporates</a> is a great resource. Use the information responsibly.</p>
+<p>I&rsquo;ve archived on Github <a href="https://github.com/skonkiel/mpls_landlords" target="_blank" rel="noopener">a derivative of the 2020 Minneapolis Assessor Parcel dataset that includes rental properties, their likely owners, and the aliases they use</a>. You can download it as a spreadsheet by following <a href="https://github.com/skonkiel/mpls_landlords/blob/master/data/final_landlords.csv" target="_blank" rel="noopener">this link</a>. You can also search for owners of a particular address or alias in <a href="https://public.tableau.com/views/MinneapolisAssessorData2020-Landlords/Dashboard2?:language=en-US&amp;publish=yes&amp;:display_count=n&amp;:origin=viz_share_link" target="_blank" rel="noopener">this dashboard</a>.</p>
+<div class='tableauPlaceholder' id='viz1635431707746' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MinneapolisAssessorData2020-Landlords&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MinneapolisAssessorData2020-Landlords&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mi&#47;MinneapolisAssessorData2020-Landlords&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1635431707746');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1227px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<p>I&rsquo;ve removed owners' addresses from the dataset because doxxing is bad karma. If you need to find contact information for a specific LLC that owns a rental property in order to advocate for yourself or others, <a href="OpenCorporates.com">OpenCorporates</a> is a great resource. The <a href="https://opendata.minneapolismn.gov/datasets/assessors-parcel-data-2020/explore" target="_blank" rel="noopener">source dataset</a> also includes a wealth of information on specific properties. Use this information responsibly.</p>
 <p>As I mention above, I make no promises to the accuracy of the data, though I&rsquo;ve tried my best. Caveat emptor.</p>
-<p>The data (as well as my analyses above) includes nonprofit owners of rental properties, as well as &ldquo;mom and pop&rdquo; landlords. Public housing has been removed from the dataset (though it&rsquo;s worth noting that only a fraction of rental units (5,700) are city or county owned).</p>
+<p>The data (as well as my analyses above) includes nonprofit owners of rental properties, as well as &ldquo;mom and pop&rdquo; landlords and some co-ops. Public housing has been removed from the dataset (though it&rsquo;s worth noting that only a fraction of rental units (5,700) are city or county owned).</p>
 <p>I&rsquo;ll update this post again soon to include a link to the analysis, for those who want to check my numbers.</p>
 <p>* Revealing my technieques publicly could help shifty landlords hide their identities better in the future. Get in touch via <a href="mailto:hello@stacykonkiel.org">email</a> if you&rsquo;re a housing advocate who wants to learn more!</p>
 
