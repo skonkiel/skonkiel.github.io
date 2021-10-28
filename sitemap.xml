@@ -1,524 +1,241 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/</loc>
-    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/project/mn-wind-power/</loc>
-    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/project/</loc>
-    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/stacy-konkiel/</loc>
-    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/</loc>
-    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/publication_types/2/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/christopher-p.-long/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/jason-rhody/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/nicky-agate/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/penelope-weber/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/publication_types/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/publication/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/rebecca-kennison/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/simone-sacchi/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/publication/agate-transformative-2020/</loc>
-    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/talk/ismpp-u-2020/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/talk/</loc>
-    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/identify-author-gender-data-analysis/</loc>
-    <lastmod>2020-11-06T21:51:37+00:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://skonkiel.github.io/categories/</loc>
-    <lastmod>2020-11-06T21:51:37+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-10-28T00:00:37+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/category/general/</loc>
+    <lastmod>2021-10-28T00:00:37+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/minneapolis-landlords/</loc>
+    <lastmod>2021-10-28T00:00:37+00:00</lastmod>
+  </url><url>
     <loc>https://skonkiel.github.io/post/</loc>
+    <lastmod>2021-10-28T00:00:37+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/</loc>
+    <lastmod>2021-10-28T00:00:37+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/project/mn-wind-power/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/project/</loc>
+    <lastmod>2021-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/publication-type/2/</loc>
+    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/publication_types/</loc>
+    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/publication/</loc>
+    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/publication/agate-transformative-2020/</loc>
+    <lastmod>2020-12-13T11:50:36-06:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/talk/altmetrics-the-state-of-the-art-for-publication-planning/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/event/</loc>
+    <lastmod>2020-11-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/identify-author-gender-data-analysis/</loc>
     <lastmod>2020-11-06T21:51:37+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/categories/work-research/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/category/work-research/</loc>
     <lastmod>2020-11-06T21:51:37+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-assessing-2020/</loc>
     <lastmod>2020-12-13T11:50:36-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/heather-coates/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/project/metrics-toolkit/</loc>
     <lastmod>2020-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/robin-champieux/</loc>
-    <lastmod>2020-04-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/talk/eresearchnz-2020/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/talk/data-intensive-approaches-to-finding-and-predicting-research-outcomes-for-new-zealand-health-research/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/stephanie-guichard/</loc>
-    <lastmod>2020-02-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/christian-herzog/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/daniel-hook/</loc>
-    <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/herzog-dimensions-2020/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/project/humetricshss/</loc>
     <lastmod>2019-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/talk/erl-2019/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/talk/working-with-the-dimensions-and-altmetric-apis-to-search-visualize-and-integrate-research-information-across-library-systems/</loc>
     <lastmod>2019-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/talk/nordic-bibliometrics-2019/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/talk/measuring-knowledge-mobilization-for-nordic-research-using-patent-and-policy-indicators/</loc>
     <lastmod>2018-11-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/mike-taylor/</loc>
-    <lastmod>2018-11-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-approaches-2018/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/bibliometrics/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/bibliometrics/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/evaluation/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/evaluation/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/humanities/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/humanities/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/indicators/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/indicators/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/research-metrics/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/research-metrics/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/tags/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/alternative-metrics/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/alternative-metrics/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/altmetric/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/altmetrics/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/altmetrics/</loc>
-    <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/karen-gutzman/</loc>
-    <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/champieux-metrics-2018/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/research-evaluation/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/research-evaluation/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/research-impact/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/research-impact/</loc>
     <lastmod>2018-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/librarians-and-research-metrics-sutton-miles/</loc>
     <lastmod>2018-07-17T21:51:37+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/sutton-awareness-2018/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/rachel-miles/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/sarah-sutton/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/altmetric/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-altmetrics-2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/citation-analysis/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/citation-analysis/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/dimensions/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/dimensions/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/new-zealand/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/new-zealand/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/finnell-building-2017/</loc>
     <lastmod>2017-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/grants/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/grants/</loc>
     <lastmod>2017-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/innovation/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/innovation/</loc>
     <lastmod>2017-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/joshua-finnell/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/library-associations/</loc>
     <lastmod>2017-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/library-associations/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/nonprofits/</loc>
     <lastmod>2017-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/nonprofits/</loc>
-    <lastmod>2017-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/mellon-humetrics-grant/</loc>
     <lastmod>2017-06-20T16:06:53+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/categories/general/</loc>
-    <lastmod>2017-06-16T21:31:40+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/deleted-twitter-history/</loc>
     <lastmod>2017-06-16T21:31:40+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/collection-development/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/collection-development/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/sutton-is-2017/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/sarah-w.-sutton/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/selection-criteria/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/selection-criteria/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/survey/</loc>
     <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/survey/</loc>
-    <lastmod>2017-05-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/innovation-micro-grant/</loc>
     <lastmod>2017-03-01T16:43:20+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/aaron-a.-sorensen/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/bastiaan-r.-bloem/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/rui-araujo/</loc>
-    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/araujo-top-2017/</loc>
     <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/altmetrics-promotion-tenure/</loc>
     <lastmod>2016-09-06T22:22:21+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-altmetrics-2016/</loc>
     <lastmod>2016-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/altmetrics-in-promotion-tenure-educause-review/</loc>
     <lastmod>2016-04-28T01:04:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/categories/events/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/category/events/</loc>
     <lastmod>2016-04-25T16:40:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/reddit-ama-may-2016/</loc>
     <lastmod>2016-04-25T16:40:03+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/force2016-innovation-challenge/</loc>
     <lastmod>2016-04-20T14:16:21+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/cassidy-r-sugimoto/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/sierra-williams/</loc>
-    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-use-2016/</loc>
     <lastmod>2016-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/assessment/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/assessment/</loc>
     <lastmod>2015-07-14T15:45:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/libraries/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/libraries/</loc>
     <lastmod>2015-07-14T15:45:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/metrics-collection-management/</loc>
     <lastmod>2015-07-14T15:45:13+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/were-overdue-on-altmetrics-for-the-digital-humanities/</loc>
     <lastmod>2015-04-29T16:51:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/heather-piwowar/</loc>
-    <lastmod>2014-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-imperative-2014/</loc>
     <lastmod>2014-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/jason-priem/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/open-access/</loc>
     <lastmod>2014-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/open-access/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/open-data/</loc>
     <lastmod>2014-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/open-data/</loc>
-    <lastmod>2014-09-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/publication_types/5/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/publication-type/5/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/open-science/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/open-science/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/science-communication/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/science-communication/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-30-day-2014/</loc>
     <lastmod>2014-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/dave-scherer/</loc>
-    <lastmod>2013-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-new-2013/</loc>
     <lastmod>2013-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/tags/repositories/</loc>
+  </url><url>
+    <loc>https://skonkiel.github.io/tag/repositories/</loc>
     <lastmod>2013-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-altmetrics-2013/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/s.-konkiel/</loc>
-    <lastmod>2013-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://skonkiel.github.io/publication/konkiel-tracking-2013/</loc>
     <lastmod>2013-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://skonkiel.github.io/admin/</loc>
   </url>
-  
-  <url>
-    <loc>https://skonkiel.github.io/authors/admin/</loc>
-  </url>
-  
 </urlset>

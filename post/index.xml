@@ -5,64 +5,153 @@
     <link>https://skonkiel.github.io/post/</link>
       <atom:link href="https://skonkiel.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Nov 2020 21:51:37 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 28 Oct 2021 00:00:37 +0000</lastBuildDate>
     <image>
-      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <url>https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://skonkiel.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Minneapolis landlord dataset and dashboard</title>
+      <link>https://skonkiel.github.io/minneapolis-landlords/</link>
+      <pubDate>Thu, 28 Oct 2021 00:00:37 +0000</pubDate>
+      <guid>https://skonkiel.github.io/minneapolis-landlords/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/skonkiel/mpls_landlords&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download the 2020 Minneapolis landlord dataset&lt;/a&gt;: properties owned, aliases, valuation, and more&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#&#34;&gt;Searchable landlord dashboard&lt;/a&gt;: Search based on owner and alias (coming soon!)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vote yes on 3, yes on rent control for Minneapolis on November 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit.&lt;/p&gt;
+&lt;p&gt;After a frustrating experience trying to buy my first home last year&amp;ndash;and disappointment in the pushback against the 2021 Minneapolis ballot question on rent control&amp;ndash;I thought I&amp;rsquo;d provide a data-driven analysis of the scale of profiteering that&amp;rsquo;s happening on the backs of the average Minneapolis renter, which is at the same time making it harder for people like me to buy a home.&lt;/p&gt;
+&lt;p&gt;As a former renter, I also want to provide a dataset to other renters and advocacy groups that makes it a lot easier to find out who owns rental properties in your neighborhood.&lt;/p&gt;
+&lt;p&gt;What follows is a back of napkin analysis underpinned by a (much more valuable) public dataset of Minneapolis landlords from 2020, which I&amp;rsquo;ve put a LOT of time into cleaning and normalizing.&lt;/p&gt;
+&lt;p&gt;Read on and then VOTE YES ON 3.&lt;/p&gt;
+&lt;h2 id=&#34;fighting-the-llc-problem-through-data-munging&#34;&gt;Fighting the &amp;ldquo;LLC problem&amp;rdquo; through data munging&lt;/h2&gt;
+&lt;p&gt;Inspiration for this project comes from &lt;a href=&#34;https://findmylandlord.chicagodsa.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Find My Landlord website&lt;/a&gt;, which aims to connect Chicago landlords to the shell companies and LLCs they use to avoid liability and, in some cases, accountability.&lt;/p&gt;
+&lt;p&gt;As that project so expertly illustrates, there&amp;rsquo;s a well known &amp;ldquo;LLC problem&amp;rdquo; among housing advocates who want to learn who owns a building. Individuals and corporations that own many buildings at once tend to protect their assets by creating different LLCs for each building they own, so if they get sued, only that building is &amp;ldquo;in danger&amp;rdquo;. They sometimes even file taxes under multiple business names in order to obsfucate the fact that they own multiple rental properties. (Read on for an example of this in action.)&lt;/p&gt;
+&lt;p&gt;To help local housing advocates overcome the LLC problem, I decided to do some hard-core data munging. I downloaded Assessor Parcel data for 2020 from the &lt;a href=&#34;https://opendata.minneapolismn.gov/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open Minneapolis&lt;/a&gt; portal. This file lists the owners, taxpayers, value, and characteristics of all Minneapolis parcels and buildings.&lt;/p&gt;
+&lt;p&gt;I cleaned the hell out of the data and then applied some techniques* in &lt;a href=&#34;https://openrefine.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Open Refine&lt;/a&gt; to find common owners of properties that were registered to many different LLCs and, in some cases, family members. I also ran an analysis on the results, which I share the headline findings of below.&lt;/p&gt;
+&lt;p&gt;Disclaimer: This data was manually reviewed and cleaned to the best of my ability. There may be mistakes and/or omissions.&lt;/p&gt;
+&lt;h2 id=&#34;what-the-data-reveals&#34;&gt;What the data reveals&lt;/h2&gt;
+&lt;h3 id=&#34;one-in-five-single-family-minneapolis-homes-is-rented-for-profit&#34;&gt;One in five single family Minneapolis homes is rented for profit&lt;/h3&gt;
+&lt;p&gt;Of the 74,689 single-family homes in Minneapolis, 13,572 are rental properties. 2,545 of these rental properties are owned by what I&amp;rsquo;ll call &amp;ldquo;corporate landlords&amp;rdquo;—those who own four or more rental properties, who make a living off of renters. These are properties that could otherwise be on the market to would-be buyers who are having &lt;a href=&#34;https://minnesota.cbslocal.com/2021/09/21/twin-cities-housing-shortage/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a hell of a time finding houses&lt;/a&gt;, especially lower-income buyers who are currently priced out of the market.&lt;/p&gt;
+&lt;h3 id=&#34;minneapolis-landlords-are-hiding-their-identities-to-an-alarming-extent&#34;&gt;Minneapolis landlords are hiding their identities to an alarming extent&lt;/h3&gt;
+&lt;p&gt;There are 852 Minneapolis landlords who have registered their properties to multiple organizations: 2,961 third-parties (typically LLCs and family members) total, in many cases hiding their ownership from tenants.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of this trickery in action—many different LLCs registered to a single family of rental property owners:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Aliases of one family&#34; srcset=&#34;
+               /media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_3dca584a32d2122a5391524ac21b5d4b.png 400w,
+               /media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_e0c3930994b6e88b1b40a33f0cd42a66.png 760w,
+               /media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://skonkiel.github.io/media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_3dca584a32d2122a5391524ac21b5d4b.png&#34;
+               width=&#34;548&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;This purposeful obsfucation &lt;a href=&#34;https://www.startribune.com/north-minneapolis-renters-wage-a-fight-with-private-equity-landlords/600062754/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;makes it difficult for tenants to hold owners accountable&lt;/a&gt;. How is this legal?&lt;/p&gt;
+&lt;h3 id=&#34;private-equity-and-local-profiteers-are-making-a-killing-on-minneapolis-renters&#34;&gt;Private equity and local profiteers are making a killing on Minneapolis renters&lt;/h3&gt;
+&lt;p&gt;The top twenty landlords (by number of properties owned) collectively own over 1,600 rental properties in Minneapolis.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Top 20 rental property owners&#34; srcset=&#34;
+               /media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_8daeeae7178873f791d4d3cb54c8f0b3.png 400w,
+               /media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_97d144b46c4704da4cbc1a72a33548ba.png 760w,
+               /media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://skonkiel.github.io/media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_8daeeae7178873f791d4d3cb54c8f0b3.png&#34;
+               width=&#34;760&#34;
+               height=&#34;263&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Though some of the top property owners are nonprofits like Project for Pride in Living, more often they are companies like Front Yard Residential Corporation and investment funds like Carpathain Capital Management.&lt;/p&gt;
+&lt;p&gt;Collectively, Minneapolis landlords collect rent on 114,203 rental units across the city. With an average rent of $1,455, that&amp;rsquo;s a whopping $166 million exiting renters pockets each month and going to landlords, rather than one&amp;rsquo;s own mortgage.&lt;/p&gt;
+&lt;h3 id=&#34;the-working-class-cant-build-wealth-if-minneapolis-landlords-own-all-the-property&#34;&gt;The working class can&amp;rsquo;t build wealth if Minneapolis landlords own all the property&lt;/h3&gt;
+&lt;p&gt;Home ownership is an excellent way for families to build wealth. Disparities in wealth along racial lines are often tied to similar disparities in homeownership rates, which in Minneapolis were historically caused by &lt;a href=&#34;https://www.minnpost.com/metro/2019/02/with-covenants-racism-was-written-into-minneapolis-housing-the-scars-are-still-visible/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;racist redlining practices&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;With that in mind, consider this: Minneapolis landlords own rental properties worth more than $19 billion dollars (as valued by the city&amp;rsquo;s assessor office). Imagine if some of those properties could be owned by families instead! It could go a long way towards addressing inequity.&lt;/p&gt;
+&lt;h3 id=&#34;mom-and-pop-landlords-shouldnt-be-let-off-the-hook&#34;&gt;&amp;ldquo;Mom and pop&amp;rdquo; landlords shouldn&amp;rsquo;t be let off the hook&lt;/h3&gt;
+&lt;p&gt;11,027 single family homes that could otherwise be owned by their residents are instead owned by so-called &amp;ldquo;mom and pop&amp;rdquo; landlords that own three or fewer properties. Only 39 of these single family homes are arguably &lt;em&gt;truly&lt;/em&gt; mom and pop-owned—that is, rented out by someone who also lives on the property.&lt;/p&gt;
+&lt;h2 id=&#34;vote-yes-on-3---rent-control-for-minneapolis&#34;&gt;Vote Yes on 3 - Rent Control for Minneapolis&lt;/h2&gt;
+&lt;p&gt;Minneapolis heads to the polls next Tuesday, November 2 to decide on rent control and other important ballot questions.&lt;/p&gt;
+&lt;p&gt;We know that &lt;a href=&#34;https://jacobinmag.com/2019/11/rent-control-housing-crisis-affordability-supply&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rent control works&lt;/a&gt;. We just need voters to support the measure at the ballot box.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re as frustrated as I am by the extent to which landlords are winning out over the rest of us, go vote.&lt;/p&gt;
+&lt;p&gt;Same day voter registration is available, as is early voting. Check out the &lt;a href=&#34;https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Election Links at the top of the Star Tribune&amp;rsquo;s election guide&lt;/a&gt; for info on registration, finding your polling place, and more.&lt;/p&gt;
+&lt;h2 id=&#34;dig-into-the-data&#34;&gt;Dig into the data&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve archived on Github &lt;a href=&#34;https://github.com/skonkiel/mpls_landlords&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a derivative of the 2020 Minneapolis Assessor Parcel dataset that includes rental properties, their likely owners, and the aliases they use&lt;/a&gt;. You can download it as a spreadsheet by following &lt;a href=&#34;https://github.com/skonkiel/mpls_landlords/blob/master/data/final_landlords.csv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this link&lt;/a&gt;. &lt;!-- You can also search for owners of a particular address or alias in this dashboard. --&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve removed owners&#39; addresses from the dataset because doxxing is bad karma. If you need to find contact information for a specific LLC that owns a rental property in order to advocate for yourself or others, &lt;a href=&#34;OpenCorporates.com&#34;&gt;OpenCorporates&lt;/a&gt; is a great resource. Use the information responsibly.&lt;/p&gt;
+&lt;p&gt;As I mention above, I make no promises to the accuracy of the data, though I&amp;rsquo;ve tried my best. Caveat emptor.&lt;/p&gt;
+&lt;p&gt;The data (as well as my analyses above) includes nonprofit owners of rental properties, as well as &amp;ldquo;mom and pop&amp;rdquo; landlords. Public housing has been removed from the dataset (though it&amp;rsquo;s worth noting that only a fraction of rental units (5,700) are city or county owned).&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll update this post again soon to include a link to the analysis, for those who want to check my numbers.&lt;/p&gt;
+&lt;p&gt;* Revealing my technieques publicly could help shifty landlords hide their identities better in the future. Get in touch via &lt;a href=&#34;mailto:hello@stacykonkiel.org&#34;&gt;email&lt;/a&gt; if you&amp;rsquo;re a housing advocate who wants to learn more!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A guide to identifying author gender for bibliometric analyses</title>
       <link>https://skonkiel.github.io/identify-author-gender-data-analysis/</link>
       <pubDate>Fri, 06 Nov 2020 21:51:37 +0000</pubDate>
       <guid>https://skonkiel.github.io/identify-author-gender-data-analysis/</guid>
-      <description>&lt;p&gt;&lt;em&gt;In 2018, I wrote a post for 
-&lt;a href=&#34;https://thebibliomagician.wordpress.com/2018/06/19/a-guide-to-identifying-author-gender-for-bibliometric-analyses-by-stacy-konkiel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Bibliomagician blog&lt;/a&gt; on identifying authors&amp;rsquo; genders based on name analyses, based on a lively discussion on the LIS-Bibliometrics listserv. I&amp;rsquo;m reposting the blog post here under a CC-BY license.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Recently on the LIS-Bibliometrics listserv, Ruth Harrison (Imperial College London) posed a question on behalf of a patron who was interested in identifying authors&amp;rsquo; genders based upon names listed on ~2,000 journal articles–too large a corpus for manual analysis. The community weighed in with many good suggestions for ways to approach a large scale gender analysis for author names. We thought it would be helpful to others to share what Ruth learned (with permission from the original posters).&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;In 2018, I wrote a post for &lt;a href=&#34;https://thebibliomagician.wordpress.com/2018/06/19/a-guide-to-identifying-author-gender-for-bibliometric-analyses-by-stacy-konkiel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Bibliomagician blog&lt;/a&gt; on identifying authors&#39; genders based on name analyses, based on a lively discussion on the LIS-Bibliometrics listserv. I&amp;rsquo;m reposting the blog post here under a CC-BY license.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Recently on the LIS-Bibliometrics listserv, Ruth Harrison (Imperial College London) posed a question on behalf of a patron who was interested in identifying authors&#39; genders based upon names listed on ~2,000 journal articles–too large a corpus for manual analysis. The community weighed in with many good suggestions for ways to approach a large scale gender analysis for author names. We thought it would be helpful to others to share what Ruth learned (with permission from the original posters).&lt;/p&gt;
 &lt;p&gt;Here are some recommendations from LIS-Bibliometrics listserv members on the best places to find author names, APIs and software you can use to analyze gender, consultants you can hire the analysis out to, and previous approaches to analysis from other gender bibliometrics researchers.&lt;/p&gt;
 &lt;h2 id=&#34;where-to-find-author-names-lists&#34;&gt;Where to find author names lists&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://login.webofknowledge.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web of Science&lt;/a&gt; was most recommended as being a good way to download full author names for publication lists. Programmatic access via the 
-&lt;a href=&#34;http://wokinfo.com/products_tools/products/related/webservices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web of Science API&lt;/a&gt; is usually available for licensing (libraries are usually the purchasers of Web of Science access for institutions, so you should contact your library to inquire as to whether API access is included in your institution&amp;rsquo;s contract).&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://login.webofknowledge.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web of Science&lt;/a&gt; was most recommended as being a good way to download full author names for publication lists. Programmatic access via the &lt;a href=&#34;http://wokinfo.com/products_tools/products/related/webservices/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Web of Science API&lt;/a&gt; is usually available for licensing (libraries are usually the purchasers of Web of Science access for institutions, so you should contact your library to inquire as to whether API access is included in your institution&amp;rsquo;s contract).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;We would be remiss if we did not point out the challenges that face anyone seeking to do a study that determines a person&amp;rsquo;s gender, based on name alone.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;New citation index 
-&lt;a href=&#34;https://www.dimensions.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dimensions&lt;/a&gt; also makes authors&amp;rsquo; full names available for download (though only for up to 50 papers at once in the free version of the app) and via the 
-&lt;a href=&#34;https://www.dimensions.ai/info/search-api/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dimensions API&lt;/a&gt;, which is freely available for those doing scientometrics research.&lt;/p&gt;
-&lt;p&gt;On the other hand, listserv members pointed out that 
-&lt;a href=&#34;https://www.scopus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scopus&lt;/a&gt; only makes authors&amp;rsquo; first initials available both in metadata downloads for publication lists and via the 
-&lt;a href=&#34;https://dev.elsevier.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scopus API&lt;/a&gt;. Therefore, it is unsuitable to use in isolation for finding author names.&lt;/p&gt;
+&lt;p&gt;New citation index &lt;a href=&#34;https://www.dimensions.ai/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dimensions&lt;/a&gt; also makes authors&#39; full names available for download (though only for up to 50 papers at once in the free version of the app) and via the &lt;a href=&#34;https://www.dimensions.ai/info/search-api/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dimensions API&lt;/a&gt;, which is freely available for those doing scientometrics research.&lt;/p&gt;
+&lt;p&gt;On the other hand, listserv members pointed out that &lt;a href=&#34;https://www.scopus.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scopus&lt;/a&gt; only makes authors&#39; first initials available both in metadata downloads for publication lists and via the &lt;a href=&#34;https://dev.elsevier.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scopus API&lt;/a&gt;. Therefore, it is unsuitable to use in isolation for finding author names.&lt;/p&gt;
 &lt;h2 id=&#34;apis-and-software&#34;&gt;APIs and software&lt;/h2&gt;
 &lt;p&gt;Automated gender analysis requires a bit of programming knowledge (or at least a willingness to learn). In particular, calling APIs and parsing publication metadata are two essential programming skills.&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://gender-api.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gender API&lt;/a&gt; is a recommended service that allows you to look up the likely gender (and degree of confidence) for a particular name or list of names. For example, you could query the name &amp;ldquo;Diana&amp;rdquo; and learn that the name is classified as &amp;lsquo;female&amp;rsquo;, with a 93% accuracy rate based on a sample of 523 names. The providers offer clients for interacting with the API in PHP, Python, and several other programming languages.&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://www.namsor.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Namsor&lt;/a&gt; is another recommended API for looking up gender based on names, and it has the added feature of looking up ethnicity, as well. The free API allows for a limited number of monthly calls; you can also pay for API access to increase your API call limit.&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://genderchecker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GenderChecker&lt;/a&gt; is a recommended name list that can be downloaded for less than $200 USD, then analyzed. As one listserv poster explained, &amp;ldquo;It&amp;rsquo;s not 100 percent accurate, but works for most American/European first names, especially if you have a large dataset. Be very careful with Chinese/Japanese/Korean names; most of the time they should be neutral unless you further checked.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://genderize.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Genderize.io&lt;/a&gt; is yet another API that was not recommended by listserv members, but appears in several recent studies and reports. The Genderize database reportedly contains 216,286 distinct names across 79 countries and 89 languages. It is free to use but rate-limited to 1000 requests per day.&lt;/p&gt;
-&lt;p&gt;Finally, the recommended Python package 
-&lt;a href=&#34;https://pypi.org/project/SexMachine/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SexMachine&lt;/a&gt; allows you to look up the gender for around 40,000 names. For each name you query, you will get a response for one of the following categories: andy (androgynous), male, female, mostly_male, or mostly_female. For example, the query &amp;ldquo;Paul&amp;rdquo; would return &amp;ldquo;male&amp;rdquo;, whereas the name &amp;ldquo;Stacy&amp;rdquo; would return &amp;ldquo;mostly_female&amp;rdquo;.&lt;/p&gt;
-&lt;h2 id=&#34;other-gender-researchers-approaches&#34;&gt;Other gender researchers&amp;rsquo; approaches&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://gender-api.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gender API&lt;/a&gt; is a recommended service that allows you to look up the likely gender (and degree of confidence) for a particular name or list of names. For example, you could query the name &amp;ldquo;Diana&amp;rdquo; and learn that the name is classified as &amp;lsquo;female&amp;rsquo;, with a 93% accuracy rate based on a sample of 523 names. The providers offer clients for interacting with the API in PHP, Python, and several other programming languages.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.namsor.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Namsor&lt;/a&gt; is another recommended API for looking up gender based on names, and it has the added feature of looking up ethnicity, as well. The free API allows for a limited number of monthly calls; you can also pay for API access to increase your API call limit.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://genderchecker.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GenderChecker&lt;/a&gt; is a recommended name list that can be downloaded for less than $200 USD, then analyzed. As one listserv poster explained, &amp;ldquo;It&amp;rsquo;s not 100 percent accurate, but works for most American/European first names, especially if you have a large dataset. Be very careful with Chinese/Japanese/Korean names; most of the time they should be neutral unless you further checked.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://genderize.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Genderize.io&lt;/a&gt; is yet another API that was not recommended by listserv members, but appears in several recent studies and reports. The Genderize database reportedly contains 216,286 distinct names across 79 countries and 89 languages. It is free to use but rate-limited to 1000 requests per day.&lt;/p&gt;
+&lt;p&gt;Finally, the recommended Python package &lt;a href=&#34;https://pypi.org/project/SexMachine/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SexMachine&lt;/a&gt; allows you to look up the gender for around 40,000 names. For each name you query, you will get a response for one of the following categories: andy (androgynous), male, female, mostly_male, or mostly_female. For example, the query &amp;ldquo;Paul&amp;rdquo; would return &amp;ldquo;male&amp;rdquo;, whereas the name &amp;ldquo;Stacy&amp;rdquo; would return &amp;ldquo;mostly_female&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;other-gender-researchers-approaches&#34;&gt;Other gender researchers&#39; approaches&lt;/h2&gt;
 &lt;p&gt;Listserv members also suggested that Ruth and her patron look to existing author gender analysis studies to find methods to borrow. Two in particular–a 2013 commentary from &lt;em&gt;Nature&lt;/em&gt;, and a more recent Elsevier report–were the most mentioned:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Larivière, V., Ni, C., Gingras, Y., Cronin, B., &amp;amp; Sugimoto, C. R. (2013). 
-&lt;a href=&#34;http://www.doi.org/10.1038/504211a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bibliometrics: Global gender disparities in science&lt;/a&gt;. &lt;em&gt;Nature&lt;/em&gt;, &lt;em&gt;504&lt;/em&gt;(7479), 211.&lt;/li&gt;
-&lt;li&gt;(2017). 
-&lt;a href=&#34;https://www.elsevier.com/connect/gender-balance-in-research-new-analytical-report-reveals-uneven-progress&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gender in the global research landscape&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Larivière, V., Ni, C., Gingras, Y., Cronin, B., &amp;amp; Sugimoto, C. R. (2013). &lt;a href=&#34;http://www.doi.org/10.1038/504211a&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bibliometrics: Global gender disparities in science&lt;/a&gt;. &lt;em&gt;Nature&lt;/em&gt;, &lt;em&gt;504&lt;/em&gt;(7479), 211.&lt;/li&gt;
+&lt;li&gt;(2017). &lt;a href=&#34;https://www.elsevier.com/connect/gender-balance-in-research-new-analytical-report-reveals-uneven-progress&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gender in the global research landscape&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The &lt;em&gt;Nature&lt;/em&gt; study&amp;rsquo;s 
-&lt;a href=&#34;http://www.nature.com/polopoly_fs/7.14227.1386700530!/suppinfoFile/504211a_s1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;supplementary files&lt;/a&gt; include a thorough discussion of how to parse Web of Science names data for a variety of countries of origin.&lt;/p&gt;
-&lt;p&gt;One listserv respondent pointed out that &amp;ldquo;The Elsevier report&amp;rsquo;s methodology implies they didn&amp;rsquo;t have an easier way to [identify author gender] (&amp;ldquo;Scopus Author Profiles were combined with gender-name data from social media, applied onomastics, and Wikipedia&amp;rdquo;).&amp;rdquo; More details on the study&amp;rsquo;s methods can be found in 
-&lt;a href=&#34;https://www.elsevier.com/__data/assets/pdf_file/0008/265661/ElsevierGenderReport_final_for-web.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a report appendix&lt;/a&gt;. Particularly useful is a discussion of the various name-gender APIs suitability for multi-country analysis.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;Nature&lt;/em&gt; study&amp;rsquo;s &lt;a href=&#34;http://www.nature.com/polopoly_fs/7.14227.1386700530!/suppinfoFile/504211a_s1.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;supplementary files&lt;/a&gt; include a thorough discussion of how to parse Web of Science names data for a variety of countries of origin.&lt;/p&gt;
+&lt;p&gt;One listserv respondent pointed out that &amp;ldquo;The Elsevier report&amp;rsquo;s methodology implies they didn&amp;rsquo;t have an easier way to [identify author gender] (&amp;ldquo;Scopus Author Profiles were combined with gender-name data from social media, applied onomastics, and Wikipedia&amp;rdquo;).&amp;rdquo; More details on the study&amp;rsquo;s methods can be found in &lt;a href=&#34;https://www.elsevier.com/__data/assets/pdf_file/0008/265661/ElsevierGenderReport_final_for-web.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a report appendix&lt;/a&gt;. Particularly useful is a discussion of the various name-gender APIs suitability for multi-country analysis.&lt;/p&gt;
 &lt;h2 id=&#34;consultants&#34;&gt;Consultants&lt;/h2&gt;
-&lt;p&gt;For those who want to hire out the work, 
-&lt;a href=&#34;http://www.science-metrix.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science-Metrix&lt;/a&gt;, 
-&lt;a href=&#34;https://www.elsevier.com/solutions/analytical-services&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Elsevier Analytical Services&lt;/a&gt;, and 
-&lt;a href=&#34;https://www.digital-science.com/products/consultancy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Science Consultancy&lt;/a&gt; are all businesses that offer a variety of bibliometrics analysis services, which may include gender analysis. Contact the consultancies themselves for more information.&lt;/p&gt;
+&lt;p&gt;For those who want to hire out the work, &lt;a href=&#34;http://www.science-metrix.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science-Metrix&lt;/a&gt;, &lt;a href=&#34;https://www.elsevier.com/solutions/analytical-services&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Elsevier Analytical Services&lt;/a&gt;, and &lt;a href=&#34;https://www.digital-science.com/products/consultancy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Digital Science Consultancy&lt;/a&gt; are all businesses that offer a variety of bibliometrics analysis services, which may include gender analysis. Contact the consultancies themselves for more information.&lt;/p&gt;
 &lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;
 &lt;p&gt;We would be remiss if we did not point out the challenges that face anyone seeking to do a study that determines a person&amp;rsquo;s gender, based on name alone. First and foremost, there is the question of &lt;strong&gt;ethics&lt;/strong&gt;: does this kind of study rob authors of their right to be identified as a particular gender that might not match the expected gender for someone with their name?&lt;/p&gt;
 &lt;p&gt;Related to that issue is the problem of the &lt;strong&gt;assumption of a gender binary&lt;/strong&gt;. All studies in this area tend to identify authors as &amp;ldquo;Male&amp;rdquo;, &amp;ldquo;Female&amp;rdquo;, &amp;ldquo;Unisex&amp;rdquo; (as in, a name that is suitable for both men and women), and &amp;ldquo;Unknown&amp;rdquo;. How can researchers more accurately identify the gender of someone who identifies as genderqueer or agender, for example? It doesn&amp;rsquo;t seem possible to do so using a simple names analysis, meaning that these kinds of studies should be approached and described with that caveat in mind.&lt;/p&gt;
@@ -76,25 +165,16 @@
       <pubDate>Tue, 17 Jul 2018 21:51:37 +0000</pubDate>
       <guid>https://skonkiel.github.io/librarians-and-research-metrics-sutton-miles/</guid>
       <description>&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-1680&#34; src=&#34;https://i0.wp.com/stacykonkiel.org/wp-content/uploads/2018/07/Screenshot-2018-07-17-16.26.18.png?resize=640%2C434&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;434&#34; srcset=&#34;https://i0.wp.com/stacykonkiel.org/wp-content/uploads/2018/07/Screenshot-2018-07-17-16.26.18.png?w=754 754w, https://i0.wp.com/stacykonkiel.org/wp-content/uploads/2018/07/Screenshot-2018-07-17-16.26.18.png?resize=300%2C203 300w, https://i0.wp.com/stacykonkiel.org/wp-content/uploads/2018/07/Screenshot-2018-07-17-16.26.18.png?resize=398%2C270 398w&#34; sizes=&#34;(max-width: 640px) 100vw, 640px&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;Journal of Librarianship and Scholarly Communication&lt;/em&gt; just published “
-&lt;a href=&#34;http://doi.org/10.7710/2162-3309.2212&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scholarly Communication Librarians’ Relationship with Research Impact Indicators: An Analysis of a National Survey of Academic Librarians in the United States&lt;/a&gt;“.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;Journal of Librarianship and Scholarly Communication&lt;/em&gt; just published “&lt;a href=&#34;http://doi.org/10.7710/2162-3309.2212&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scholarly Communication Librarians’ Relationship with Research Impact Indicators: An Analysis of a National Survey of Academic Librarians in the United States&lt;/a&gt;“.&lt;/p&gt;
 &lt;p&gt;This is the final publication related a topic I’ve been working on since 2013 (!), when I first realized that although academic librarians were interested in research metrics, no one had yet studied the reality of how they were using these kinds of indicators in their day-to-day jobs and in support of their own careers.&lt;/p&gt;
 &lt;p&gt;Along the way, I’ve been privileged to work with Sarah Sutton and Rachel Miles (and for a short period, Michael Levine-Clark) on a series of publications and presentations that include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;https://doi.org/10.1080/0361526X.2017.1297593&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“Is What’s “Trending” What’s Worth Purchasing? Insights from a National Study of Collection Development Librarians”&lt;/a&gt; in &lt;em&gt;The Serials Librarian&lt;/em&gt; (which we also 
-&lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34607&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;presented upon at NASIG 2016&lt;/a&gt; in Albuquerque)&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://doi.org/10.3138/jelis.59.1-2.05&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“Awareness of Altmetrics among LIS Scholars and Faculty”&lt;/a&gt; in &lt;em&gt;Journal of Education for Library and Information Science&lt;/em&gt; (which we 
-&lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34608&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;compared to librarians at ER&amp;amp;L 2016&lt;/a&gt; in Austin, TX)&lt;/li&gt;
-&lt;li&gt;“
-&lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34459&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;What’s used to gauge when engaging?: Determining academic librarian roles in research assessment reporting services&lt;/a&gt;“, presented at the 2016 Bibliometrics and Research Assessment Symposium in Bethesda, MD.&lt;/li&gt;
-&lt;li&gt;“
-&lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scholarly Communication Librarians’ Relationship with Research Impact Metrics&lt;/a&gt;,” a panel presentation at ‘Finding Meaning in Metrics’ at ALA Annual 2016 in Orlando, FL&lt;/li&gt;
-&lt;li&gt;“Use of Altmetrics in US-based academic libraries,” a presentation at the Second Altmetrics Conference in Amsterdam (summarized on 
-&lt;a href=&#34;https://altmetricsconf.wordpress.com/2015/10/12/altmetrics-in-the-library-session/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Altmetrics Conference blog&lt;/a&gt; by Ian Mulvaney)&lt;/li&gt;
-&lt;li&gt;“
-&lt;a href=&#34;http://altmetrics.org/altmetrics15/konkiel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Myth vs. reality: Altmetrics and librarians,&lt;/a&gt;” a presentation at the Altmetrics15 workshop in Amsterdam&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://doi.org/10.1080/0361526X.2017.1297593&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“Is What’s “Trending” What’s Worth Purchasing? Insights from a National Study of Collection Development Librarians”&lt;/a&gt; in &lt;em&gt;The Serials Librarian&lt;/em&gt; (which we also &lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34607&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;presented upon at NASIG 2016&lt;/a&gt; in Albuquerque)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://doi.org/10.3138/jelis.59.1-2.05&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;“Awareness of Altmetrics among LIS Scholars and Faculty”&lt;/a&gt; in &lt;em&gt;Journal of Education for Library and Information Science&lt;/em&gt; (which we &lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34608&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;compared to librarians at ER&amp;amp;L 2016&lt;/a&gt; in Austin, TX)&lt;/li&gt;
+&lt;li&gt;“&lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34459&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;What’s used to gauge when engaging?: Determining academic librarian roles in research assessment reporting services&lt;/a&gt;“, presented at the 2016 Bibliometrics and Research Assessment Symposium in Bethesda, MD.&lt;/li&gt;
+&lt;li&gt;“&lt;a href=&#34;http://krex.k-state.edu/dspace/handle/2097/34606&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scholarly Communication Librarians’ Relationship with Research Impact Metrics&lt;/a&gt;,” a panel presentation at ‘Finding Meaning in Metrics’ at ALA Annual 2016 in Orlando, FL&lt;/li&gt;
+&lt;li&gt;“Use of Altmetrics in US-based academic libraries,” a presentation at the Second Altmetrics Conference in Amsterdam (summarized on &lt;a href=&#34;https://altmetricsconf.wordpress.com/2015/10/12/altmetrics-in-the-library-session/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Altmetrics Conference blog&lt;/a&gt; by Ian Mulvaney)&lt;/li&gt;
+&lt;li&gt;“&lt;a href=&#34;http://altmetrics.org/altmetrics15/konkiel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Myth vs. reality: Altmetrics and librarians,&lt;/a&gt;” a presentation at the Altmetrics15 workshop in Amsterdam&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We ultimately learned that:&lt;/p&gt;
 &lt;ul&gt;
@@ -119,18 +199,13 @@
 &lt;p style=&#34;text-align: center;&#34;&gt;
   CC-BY Nicky Agate / Medium
 &lt;/p&gt;
-&lt;p&gt;I’m excited to announce that the 
-&lt;a href=&#34;http://humetricshss.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HuMetricsHSS&lt;/a&gt; research team–which 
-&lt;a href=&#34;https://trianglesci.org/2016/05/31/humetrics-building-humane-metrics-for-the-humanities/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I was a part of at the 2016 TriangleSCI conference&lt;/a&gt;–has received the support of the Andrew W. Mellon Foundation to continue our work of encouraging the discovery and use of “humane” research evaluation metrics for the humanities and social sciences.&lt;/p&gt;
+&lt;p&gt;I’m excited to announce that the &lt;a href=&#34;http://humetricshss.org&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HuMetricsHSS&lt;/a&gt; research team–which &lt;a href=&#34;https://trianglesci.org/2016/05/31/humetrics-building-humane-metrics-for-the-humanities/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;I was a part of at the 2016 TriangleSCI conference&lt;/a&gt;–has received the support of the Andrew W. Mellon Foundation to continue our work of encouraging the discovery and use of “humane” research evaluation metrics for the humanities and social sciences.&lt;/p&gt;
 &lt;p&gt;HSS scholars are increasingly frustrated by the prevalence of the use of evaluation metrics (borrowed from the sciences) that do not accurately capture the impacts of their work. Our grand vision is to develop better metrics, ones that are rooted in the values that are important to scholars. This grant-funded research is a start.&lt;/p&gt;
-&lt;p&gt;From 
-&lt;a href=&#34;http://www.cal.msu.edu/news/humetricshss&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the press release&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;From &lt;a href=&#34;http://www.cal.msu.edu/news/humetricshss&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the press release&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“We are reverse-engineering the way metrics have operated in higher education,” said Christopher P. Long, Dean of the College of Arts &amp;amp; Letters at Michigan State University and one of the Principal Investigators (PIs) of the Mellon-funded project. “We begin not with what can be measured technologically, but by listening to scholars themselves as they identify the practices of scholarship that enrich their work and connect it to a broader public.”&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;We’ll be sharing updates on the HuMetricsHSS project from &lt;/span&gt;
-&lt;a href=&#34;http://humetricshss.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;our website&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt; and &lt;/span&gt;
-&lt;a href=&#34;http://twitter.com/humetricshss&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;on Twitter&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;, so please follow along!&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;We’ll be sharing updates on the HuMetricsHSS project from &lt;/span&gt;&lt;a href=&#34;http://humetricshss.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;our website&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt; and &lt;/span&gt;&lt;a href=&#34;http://twitter.com/humetricshss&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;on Twitter&lt;/span&gt;&lt;/a&gt;&lt;span style=&#34;font-weight: 400;&#34;&gt;, so please follow along!&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Much gratitude to the Mellon Foundation for supporting HuMetricsHSS.&lt;/p&gt;
 </description>
     </item>
@@ -140,11 +215,9 @@
       <link>https://skonkiel.github.io/deleted-twitter-history/</link>
       <pubDate>Fri, 16 Jun 2017 21:31:40 +0000</pubDate>
       <guid>https://skonkiel.github.io/deleted-twitter-history/</guid>
-      <description>&lt;p&gt;I just used a service called 
-&lt;a href=&#34;https://www.gocardigan.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cardigan&lt;/a&gt; to delete the 10k+ tweets I’ve published since 2007, when I first joined Twitter.&lt;/p&gt;
+      <description>&lt;p&gt;I just used a service called &lt;a href=&#34;https://www.gocardigan.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cardigan&lt;/a&gt; to delete the 10k+ tweets I’ve published since 2007, when I first joined Twitter.&lt;/p&gt;
 &lt;p&gt;I don’t know about you, but I’ve changed a lot since I was 24 years old.&lt;/p&gt;
-&lt;p&gt;It didn’t make sense to me to keep ten years worth of miscellany–silly jokes, uninformed hot takes, occasional sharp insights, and so on–up on the Internet, gathering dust, making advertising money for Twitter. I don’t want to support a company that even with a $10.8 billion valuation somehow can’t get it right and stop 
-&lt;a href=&#34;http://forward.com/fast-forward/374276/antifas-most-prominent-jew-booted-from-twitter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;banning innocent users rather than the Nazis who are harrassing them&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It didn’t make sense to me to keep ten years worth of miscellany–silly jokes, uninformed hot takes, occasional sharp insights, and so on–up on the Internet, gathering dust, making advertising money for Twitter. I don’t want to support a company that even with a $10.8 billion valuation somehow can’t get it right and stop &lt;a href=&#34;http://forward.com/fast-forward/374276/antifas-most-prominent-jew-booted-from-twitter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;banning innocent users rather than the Nazis who are harrassing them&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I don’t enjoy Twitter anymore. Over the years, Twitter has gone from a great place (to stay in touch with friends and former colleagues worldwide, to find interesting research and industry news, to meet new people) to one that seriously bums me out every time I log on (every day brings a new outrage, smart people sniping at each other, Mean Librarian Twitter, and unintelligible memes). It’s become superficial on a lot of levels. It’s often used as a tool to demean and call out rather than enrich and uplift.&lt;/p&gt;
 &lt;p&gt;All that said, I’m not going to delete my account outright. Twitter is still somewhat important professionally, so I’ll continue using it to share the occasional piece of research or to livetweet interesting conferences.&lt;/p&gt;
 &lt;p&gt;But I’d rather let my writing and research speak for itself, in longform. And for my personal and professional relationships to deepen, offline.&lt;/p&gt;
@@ -160,13 +233,11 @@
       <link>https://skonkiel.github.io/innovation-micro-grant/</link>
       <pubDate>Wed, 01 Mar 2017 16:43:20 +0000</pubDate>
       <guid>https://skonkiel.github.io/innovation-micro-grant/</guid>
-      <description>&lt;p&gt;I’m super excited to announce that the Innovation in Libraries grant is now accepting applications: &lt;a href=&#34;http://www.awesomefoundation.org/en/chapters/libraries&#34;&gt;http://www.awesomefoundation.org/en/chapters/libraries&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;I’m super excited to announce that the Innovation in Libraries grant is now accepting applications: &lt;a href=&#34;http://www.awesomefoundation.org/en/chapters/libraries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://www.awesomefoundation.org/en/chapters/libraries&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A core group of Library Pipeliners has been working hard for months to recruit rank-and-file librarians worldwide, many of whom are funding this grant out of their own pockets (!). Each month through August 2017, our Awesome Foundation chapter will award a $1000 USD grant to prototype library-based innovations (both technical and non-technical in nature) that are inclusive, daring, and diverse.&lt;/p&gt;
 &lt;p&gt;I am so proud of this grassroots effort to support risk-taking in librarianship. This is a great step towards building community through organizing, and I’m really excited to be a part of it.&lt;/p&gt;
 &lt;p&gt;Special recognition goes to Josh Finnell (Los Alamos National Lab), Robin Champieux (OHSU), and Bonnie Tijerina (Data &amp;amp; Society/ER&amp;amp;L), all of whom were crucial to getting this project off the ground.&lt;/p&gt;
-&lt;p&gt;For more information on the grant, please do visit the 
-&lt;a href=&#34;https://www.librarypipeline.org/innovation/innovation-microfunding/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;grant webpage&lt;/a&gt; or apply via the 
-&lt;a href=&#34;http://www.awesomefoundation.org/en/chapters/libraries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Awesome Foundation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more information on the grant, please do visit the &lt;a href=&#34;https://www.librarypipeline.org/innovation/innovation-microfunding/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;grant webpage&lt;/a&gt; or apply via the &lt;a href=&#34;http://www.awesomefoundation.org/en/chapters/libraries&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Awesome Foundation&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -182,10 +253,8 @@
 &lt;li&gt;Hmm, that’s a pretty interesting idea! If applied correctly (i.e. in tandem with expert peer review and traditional metrics like citation counts, etc), I could see how altmetrics could improve the evaluation process for P&amp;amp;T.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;You can probably guess how I lean.&lt;/p&gt;
-&lt;p&gt;With that in mind, I wanted to think aloud about 
-&lt;a href=&#34;https://www.insidehighered.com/advice/2014/01/13/essay-calls-reform-tenure-and-promotion-system&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an editorial I recently read in &lt;em&gt;Inside Higher Ed&lt;/em&gt;&lt;/a&gt; (a bit late to the game–the essay was written in 2014). It’s a great summary of many of the issues that plague P&amp;amp;T here in the States, and in particular the bits about “legitimacy markers” make a great argument in favor of recognizing altmetrics in P&amp;amp;T evaluation and preparation guidelines.&lt;/p&gt;
-&lt;p&gt;Below, I’ve excerpted the parts [to which I want to respond] (and the &lt;span style=&#34;text-decoration: underline;&#34;&gt;bits I want to emphasize&lt;/span&gt;), but 
-&lt;a href=&#34;https://www.insidehighered.com/advice/2014/01/13/essay-calls-reform-tenure-and-promotion-system&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;please visit &lt;em&gt;Inside Higher Ed&lt;/em&gt; and read the piece in its entirety&lt;/a&gt;, it’s worth your time.&lt;/p&gt;
+&lt;p&gt;With that in mind, I wanted to think aloud about &lt;a href=&#34;https://www.insidehighered.com/advice/2014/01/13/essay-calls-reform-tenure-and-promotion-system&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an editorial I recently read in &lt;em&gt;Inside Higher Ed&lt;/em&gt;&lt;/a&gt; (a bit late to the game–the essay was written in 2014). It’s a great summary of many of the issues that plague P&amp;amp;T here in the States, and in particular the bits about “legitimacy markers” make a great argument in favor of recognizing altmetrics in P&amp;amp;T evaluation and preparation guidelines.&lt;/p&gt;
+&lt;p&gt;Below, I’ve excerpted the parts [to which I want to respond] (and the &lt;span style=&#34;text-decoration: underline;&#34;&gt;bits I want to emphasize&lt;/span&gt;), but &lt;a href=&#34;https://www.insidehighered.com/advice/2014/01/13/essay-calls-reform-tenure-and-promotion-system&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;please visit &lt;em&gt;Inside Higher Ed&lt;/em&gt; and read the piece in its entirety&lt;/a&gt;, it’s worth your time.&lt;/p&gt;
 &lt;p style=&#34;padding-left: 30px;&#34;&gt;
   &lt;em&gt;&lt;strong&gt;The assumption that we know a scholar’s work is excellent if it has been recognized by a very narrow set of legitimacy markers adds bias to the process and works against recognition of newer form of scholarship.&lt;/strong&gt;&lt;/em&gt;
 &lt;/p&gt;
@@ -204,10 +273,7 @@
 &lt;p style=&#34;padding-left: 30px;&#34;&gt;
   &lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;em&gt;Work that is addressing contemporary social problems deserves to be evaluated by criteria better suited to its purposes and not relegated to the back seat behind basic or traditional scholarship.&lt;/em&gt;&lt;/span&gt;
 &lt;/p&gt;
-&lt;p&gt;Altmetrics technologies aren’t yet advanced enough to do most of the things I’ve suggested above (in particular, to mine news coverage or the larger Web for mentions of the effects of research, rather than links to research articles themselves). But the field is very young, and I expect we’ll get there soon enough. And in the meantime, we’ve got some pretty decent proxies for true impact already in the main altmetrics services (i.e. 
-&lt;a href=&#34;https://www.altmetric.com/blog/new-source-alert-policy-documents/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;policy citations in Altmetric Explorer&lt;/a&gt;, 
-&lt;a href=&#34;http://plumanalytics.com/citations-arent-telling/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clinical citations in PlumX&lt;/a&gt;, 
-&lt;a href=&#34;http://blog.impactstory.org/introducing-depsy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dependency PageRank for useful software projects in Depsy/Impactstory&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Altmetrics technologies aren’t yet advanced enough to do most of the things I’ve suggested above (in particular, to mine news coverage or the larger Web for mentions of the effects of research, rather than links to research articles themselves). But the field is very young, and I expect we’ll get there soon enough. And in the meantime, we’ve got some pretty decent proxies for true impact already in the main altmetrics services (i.e. &lt;a href=&#34;https://www.altmetric.com/blog/new-source-alert-policy-documents/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;policy citations in Altmetric Explorer&lt;/a&gt;, &lt;a href=&#34;http://plumanalytics.com/citations-arent-telling/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clinical citations in PlumX&lt;/a&gt;, &lt;a href=&#34;http://blog.impactstory.org/introducing-depsy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dependency PageRank for useful software projects in Depsy/Impactstory&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;In the shorter term, we need for academics to advocate for the inclusion of altmetrics in promotion &amp;amp; tenure evaluation and preparation guidelines.&lt;/p&gt;
 &lt;p&gt;Most researchers don’t know that this data is available, so they tend not to use it in preparing their dossiers. Fair enough.&lt;/p&gt;
 &lt;p&gt;What concerns me are the researchers who are aware of altmetrics, but who are hesitant to include it in their dossiers for fear that their colleagues a) won’t know what to do with the data, or b) won’t take them seriously if they include it. After all, there’s a lot of misinformation out there about what altmetrics are meant to do, and if you’ve got a reviewer that’s misinformed or that has a bone to pick re: altmetrics, that could potentially affect your career.&lt;/p&gt;
@@ -223,11 +289,9 @@
       <link>https://skonkiel.github.io/altmetrics-in-promotion-tenure-educause-review/</link>
       <pubDate>Thu, 28 Apr 2016 01:04:41 +0000</pubDate>
       <guid>https://skonkiel.github.io/altmetrics-in-promotion-tenure-educause-review/</guid>
-      <description>&lt;p&gt;An 
-&lt;a href=&#34;http://er.educause.edu/articles/2016/3/the-use-of-altmetrics-in-promotion-and-tenure&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;article&lt;/a&gt; I co-authored along with Cassidy Sugimoto (Indiana University) and Sierra Williams (LSE Impact Blog) was recently published in the &lt;em&gt;Educause Review&lt;/em&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;An &lt;a href=&#34;http://er.educause.edu/articles/2016/3/the-use-of-altmetrics-in-promotion-and-tenure&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;article&lt;/a&gt; I co-authored along with Cassidy Sugimoto (Indiana University) and Sierra Williams (LSE Impact Blog) was recently published in the &lt;em&gt;Educause Review&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;From the intro: “Promotion and tenure decisions in the United States often rely on various scientometric indicators (e.g., citation counts and journal impact factors) as a proxy for research quality and impact. Now a new class of metrics — altmetrics — can help faculty provide impact evidence that citation-based metrics might miss: for example, the influence of research on public policy or culture, the introduction of lifesaving health interventions, and contributions to innovation and commercialization. But to do that, college and university faculty and administrators alike must take more nuanced, responsible, and informed approaches to using metrics for promotion and tenure decisions”&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&#34;http://er.educause.edu/articles/2016/3/the-use-of-altmetrics-in-promotion-and-tenure&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Read the full article on the &lt;em&gt;Educause Review&lt;/em&gt; website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://er.educause.edu/articles/2016/3/the-use-of-altmetrics-in-promotion-and-tenure&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Read the full article on the &lt;em&gt;Educause Review&lt;/em&gt; website&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -277,12 +341,7 @@
       <link>https://skonkiel.github.io/force2016-innovation-challenge/</link>
       <pubDate>Wed, 20 Apr 2016 14:16:21 +0000</pubDate>
       <guid>https://skonkiel.github.io/force2016-innovation-challenge/</guid>
-      <description>&lt;p&gt;I’m pleased to report that along with the team behind 
-&lt;a href=&#34;https://elevator.jisc.ac.uk/e/force2016/idea/radian&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Radian&lt;/a&gt; (a knowledge portal for data management librarians), the 
-&lt;a href=&#34;https://elevator.jisc.ac.uk/e/force2016/idea/metric-toolkit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Metric Tookit&lt;/a&gt; (pitched by me, 
-&lt;a href=&#34;https://coateshl.wordpress.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Heather Coates&lt;/a&gt;, and 
-&lt;a href=&#34;https://orcid.org/0000-0001-7023-9832&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Robin Champieux&lt;/a&gt;) has won the 
-&lt;a href=&#34;https://www.force11.org/meetings/force2016/program/agenda/session-pitch-it-innovation-challenge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Force 2016 PitchIt Innovation Challenge&lt;/a&gt;!&lt;/p&gt;
+      <description>&lt;p&gt;I’m pleased to report that along with the team behind &lt;a href=&#34;https://elevator.jisc.ac.uk/e/force2016/idea/radian&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Radian&lt;/a&gt; (a knowledge portal for data management librarians), the &lt;a href=&#34;https://elevator.jisc.ac.uk/e/force2016/idea/metric-toolkit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Metric Tookit&lt;/a&gt; (pitched by me, &lt;a href=&#34;https://coateshl.wordpress.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Heather Coates&lt;/a&gt;, and &lt;a href=&#34;https://orcid.org/0000-0001-7023-9832&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Robin Champieux&lt;/a&gt;) has won the &lt;a href=&#34;https://www.force11.org/meetings/force2016/program/agenda/session-pitch-it-innovation-challenge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Force 2016 PitchIt Innovation Challenge&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;I’m hugely proud and very excited about bringing this idea to life. In talking with researchers and librarians worldwide over the past two years, the single biggest request I tend to get is an easy way to understand what metrics &lt;em&gt;really mean&lt;/em&gt; (or more importantly, what they &lt;em&gt;don’t&lt;/em&gt; mean). This toolkit will be that resource.&lt;/p&gt;
 &lt;p&gt;We’ve already started to get some promising feedback about our plans, including these nice tweets from (one of my favorite open scientists :)) Erin McKiernan and Sara Mannheimer:&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34; data-lang=&#34;en&#34;&gt;
@@ -293,10 +352,8 @@
     — Erin McKiernⓐn (@emckiernan13) &lt;a href=&#34;https://twitter.com/emckiernan13/status/722531777084989441&#34;&gt;April 19, 2016&lt;/a&gt;
   &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;To learn more about our vision, visit the 
-&lt;a href=&#34;https://elevator.jisc.ac.uk/e/force2016/idea/metric-toolkit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jisc Elevator site&lt;/a&gt;, where we’ve submitted our pitch and an accompanying video.&lt;/p&gt;
-&lt;p&gt;Many thanks to Heather and Robin, who were the driving force behind developing such a compelling pitch deck! And thank you also to the 
-&lt;a href=&#34;https://www.force11.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Force11&lt;/a&gt; community–we look forward to sharing our results with you soon!&lt;/p&gt;
+&lt;p&gt;To learn more about our vision, visit the &lt;a href=&#34;https://elevator.jisc.ac.uk/e/force2016/idea/metric-toolkit&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jisc Elevator site&lt;/a&gt;, where we’ve submitted our pitch and an accompanying video.&lt;/p&gt;
+&lt;p&gt;Many thanks to Heather and Robin, who were the driving force behind developing such a compelling pitch deck! And thank you also to the &lt;a href=&#34;https://www.force11.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Force11&lt;/a&gt; community–we look forward to sharing our results with you soon!&lt;/p&gt;
 </description>
     </item>
     
@@ -306,12 +363,9 @@
       <pubDate>Tue, 14 Jul 2015 15:45:13 +0000</pubDate>
       <guid>https://skonkiel.github.io/metrics-collection-management/</guid>
       <description>&lt;p&gt;I’m currently working with Sarah Sutton at Emporia State University on launching a survey to get a sense of how librarians use altmetrics, including for collection development purposes. (Is it useful to know if a book has been cited in a policy document, even if it’s rarely circulated, so you don’t deaccession it? Can monitoring online activity for all scholarship–even articles that a library doesn’t have subscription access to–help librarians make much quicker purchasing decisions for articles and journals that patrons might request? And so on.)&lt;/p&gt;
-&lt;p&gt;So it was with a lot of interest that I read Chris Bourg’s “
-&lt;a href=&#34;https://chrisbourg.wordpress.com/2015/07/12/infrastructure-and-culture-a-job-talk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Infrastructure and Culture: A job talk&lt;/a&gt;” yesterday. In the talk (which rightly landed her the position of Director of MIT Libraries, at least in part), Bourg describes how institutional cultures are so important to (among other things) the failure or success of campus scholarly communication initiatives.&lt;/p&gt;
-&lt;p&gt;Crucially, she talks about the unintended consequences that a culture of quantification can have upon decisions that are made for library collections, especially collections that might not be popular but that might inform important research projects, like 
-&lt;a href=&#34;https://news.stanford.edu/news/2014/june/evolution-language-brazil-060414.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this study that uses old, uncirculated volumes to study the evolution of Brazilian Portuguese over time&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I encourage you to 
-&lt;a href=&#34;https://chrisbourg.wordpress.com/2015/07/12/infrastructure-and-culture-a-job-talk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;read Bourg’s post in its entirety&lt;/a&gt;, but wanted to pull out one section in particular that I think is a valuable way to think about assessment and metrics w/r/t library services:&lt;/p&gt;
+&lt;p&gt;So it was with a lot of interest that I read Chris Bourg’s “&lt;a href=&#34;https://chrisbourg.wordpress.com/2015/07/12/infrastructure-and-culture-a-job-talk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Infrastructure and Culture: A job talk&lt;/a&gt;” yesterday. In the talk (which rightly landed her the position of Director of MIT Libraries, at least in part), Bourg describes how institutional cultures are so important to (among other things) the failure or success of campus scholarly communication initiatives.&lt;/p&gt;
+&lt;p&gt;Crucially, she talks about the unintended consequences that a culture of quantification can have upon decisions that are made for library collections, especially collections that might not be popular but that might inform important research projects, like &lt;a href=&#34;https://news.stanford.edu/news/2014/june/evolution-language-brazil-060414.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this study that uses old, uncirculated volumes to study the evolution of Brazilian Portuguese over time&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I encourage you to &lt;a href=&#34;https://chrisbourg.wordpress.com/2015/07/12/infrastructure-and-culture-a-job-talk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;read Bourg’s post in its entirety&lt;/a&gt;, but wanted to pull out one section in particular that I think is a valuable way to think about assessment and metrics w/r/t library services:&lt;/p&gt;
 &lt;p style=&#34;padding-left:30px;&#34;&gt;
   &lt;em&gt;Developing new ways of demonstrating the impact of our services and collections is a way of promoting a culture that values assessment, but also recognizes that the true impact of libraries and librarians is often delayed and too idiosyncratic to show up in most of the standard ROI style assessment tools currently in use.&lt;/em&gt;
 &lt;/p&gt;
@@ -341,19 +395,12 @@
 &lt;li&gt;occasionally, by the citations your journal articles and books receive&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Unsurprisingly, this framework tends to favors books and, to a lesser extent, journal articles. The value of digital scholarship projects (websites, interactive exhibitions, etc), software, and research data aren’t taken into account under this model. Thank goodness that’s starting to change.&lt;/p&gt;
-&lt;p&gt;In the past few years, 
-&lt;a href=&#34;https://www.mla.org/guidelines_evaluation_digital&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;scholarly&lt;/a&gt; 
-&lt;a href=&#34;http://historians.org/teaching-and-learning/current-projects/committee-on-professional-evaluation-of-digital-scholarship-in-history/aha-draft-guidelines-for-evaluation-of-digital-scholarship&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;societies&lt;/a&gt; and 
-&lt;a href=&#34;http://www.academiccommons.org/2014/07/24/digital-scholarship-and-the-tenure-and-promotion-process/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;some universities&lt;/a&gt; have created guidelines to help traditionalists understand the impacts of digital scholarship projects. Faculty are encouraged to think beyond the monograph when considering what types of work might have a lasting influence on the profession.&lt;/p&gt;
+&lt;p&gt;In the past few years, &lt;a href=&#34;https://www.mla.org/guidelines_evaluation_digital&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;scholarly&lt;/a&gt; &lt;a href=&#34;http://historians.org/teaching-and-learning/current-projects/committee-on-professional-evaluation-of-digital-scholarship-in-history/aha-draft-guidelines-for-evaluation-of-digital-scholarship&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;societies&lt;/a&gt; and &lt;a href=&#34;http://www.academiccommons.org/2014/07/24/digital-scholarship-and-the-tenure-and-promotion-process/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;some universities&lt;/a&gt; have created guidelines to help traditionalists understand the impacts of digital scholarship projects. Faculty are encouraged to think beyond the monograph when considering what types of work might have a lasting influence on the profession.&lt;/p&gt;
 &lt;p&gt;But these guidelines tend not to address newer types of quantitative and qualitative data, sourced from the web, that can help reviewers understand the full scope of the impacts your work may have. This data can include newer impact metrics like numbers of website visitors, what other scholars are saying about your work on their research blogs and social media, how many members of the public have reviewed your books on GoodReads and Amazon, and so on.&lt;/p&gt;
 &lt;p&gt;That’s where my current work comes in.&lt;/p&gt;
 &lt;p&gt;&lt;img class=&#34;alignnone&#34; src=&#34;https://i0.wp.com/i.imgur.com/48bR0YU.png?w=640&#34; alt=&#34;&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I’m now in the process of talking with humanities researchers, from department chairs to graduate students, to better understand what types of data might be useful in supplementing their understanding of impacts for digital humanities research.&lt;/p&gt;
-&lt;p&gt;And I’ve done two talks in the past week–
-&lt;a href=&#34;http://dx.doi.org/10.6084/m9.figshare.1393376&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one&lt;/a&gt; at the 
-&lt;a href=&#34;http://ischoolgroups.sjsu.edu/asistsc/sig-symposium/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASIS&amp;amp;T Virtual Symposium on Information Technology in the Arts &amp;amp; Humanities&lt;/a&gt;, and 
-&lt;a href=&#34;http://dx.doi.org/10.6084/m9.figshare.1394962&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one&lt;/a&gt; at the 
-&lt;a href=&#34;commons.pacificu.edu/arcs/program.html&#34;&gt;Advancing Research Communication &amp;amp; Scholarship&lt;/a&gt; meeting.&lt;/p&gt;
+&lt;p&gt;And I’ve done two talks in the past week–&lt;a href=&#34;http://dx.doi.org/10.6084/m9.figshare.1393376&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one&lt;/a&gt; at the &lt;a href=&#34;http://ischoolgroups.sjsu.edu/asistsc/sig-symposium/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ASIS&amp;amp;T Virtual Symposium on Information Technology in the Arts &amp;amp; Humanities&lt;/a&gt;, and &lt;a href=&#34;http://dx.doi.org/10.6084/m9.figshare.1394962&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one&lt;/a&gt; at the &lt;a href=&#34;commons.pacificu.edu/arcs/program.html&#34;&gt;Advancing Research Communication &amp;amp; Scholarship&lt;/a&gt; meeting.&lt;/p&gt;
 &lt;p&gt;Both talks were intended to get conversations started about altmetrics and the humanities–what might work, what would never work, what data sources could potentially be tracked that aren’t yet included in services like Altmetric and PlumX.&lt;/p&gt;
 &lt;p&gt;I’ll be doing more researching, writing, thinking and speaking on the topic in the coming months–stay tuned for more information.&lt;/p&gt;
 &lt;p&gt;In the meantime, I’d love to get your feedback in the comments below.&lt;/p&gt;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>libraries | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/tag/libraries/</link>
+      <atom:link href="https://skonkiel.github.io/tag/libraries/index.xml" rel="self" type="application/rss+xml" />
+    <description>libraries</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 14 Jul 2015 15:45:13 +0000</lastBuildDate>
+    <image>
+      <url>https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png</url>
+      <title>libraries</title>
+      <link>https://skonkiel.github.io/tag/libraries/</link>
+    </image>
+    
+    <item>
+      <title>The case against (only) using metrics for collection management</title>
+      <link>https://skonkiel.github.io/metrics-collection-management/</link>
+      <pubDate>Tue, 14 Jul 2015 15:45:13 +0000</pubDate>
+      <guid>https://skonkiel.github.io/metrics-collection-management/</guid>
+      <description>&lt;p&gt;I’m currently working with Sarah Sutton at Emporia State University on launching a survey to get a sense of how librarians use altmetrics, including for collection development purposes. (Is it useful to know if a book has been cited in a policy document, even if it’s rarely circulated, so you don’t deaccession it? Can monitoring online activity for all scholarship–even articles that a library doesn’t have subscription access to–help librarians make much quicker purchasing decisions for articles and journals that patrons might request? And so on.)&lt;/p&gt;
+&lt;p&gt;So it was with a lot of interest that I read Chris Bourg’s “&lt;a href=&#34;https://chrisbourg.wordpress.com/2015/07/12/infrastructure-and-culture-a-job-talk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Infrastructure and Culture: A job talk&lt;/a&gt;” yesterday. In the talk (which rightly landed her the position of Director of MIT Libraries, at least in part), Bourg describes how institutional cultures are so important to (among other things) the failure or success of campus scholarly communication initiatives.&lt;/p&gt;
+&lt;p&gt;Crucially, she talks about the unintended consequences that a culture of quantification can have upon decisions that are made for library collections, especially collections that might not be popular but that might inform important research projects, like &lt;a href=&#34;https://news.stanford.edu/news/2014/june/evolution-language-brazil-060414.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this study that uses old, uncirculated volumes to study the evolution of Brazilian Portuguese over time&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I encourage you to &lt;a href=&#34;https://chrisbourg.wordpress.com/2015/07/12/infrastructure-and-culture-a-job-talk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;read Bourg’s post in its entirety&lt;/a&gt;, but wanted to pull out one section in particular that I think is a valuable way to think about assessment and metrics w/r/t library services:&lt;/p&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;
+  &lt;em&gt;Developing new ways of demonstrating the impact of our services and collections is a way of promoting a culture that values assessment, but also recognizes that the true impact of libraries and librarians is often delayed and too idiosyncratic to show up in most of the standard ROI style assessment tools currently in use.&lt;/em&gt;
+&lt;/p&gt;
+&lt;p style=&#34;padding-left:30px;&#34;&gt;
+  &lt;em&gt;So while I am a fan of assessment and data-driven decision-making, I think it is critically important that we make sure the data we are using captures the full story of our impact. As a social scientist with experience teaching and consulting on statistics and research methods, I’m committed to making sure that the assessment tools we use in libraries are the right ones, that the data we collect measures what really matters, and that we use methods appropriate to the decisions we want to make.&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;In this spirit, I ask: what methods are you using to drive collection development at your library? And how might you use metrics (including altmetrics) in a more nuanced way to achieve goals that are in line with your larger library (and institutional) culture?&lt;/p&gt;
+&lt;p&gt;PS Keep your eyes on your inbox–if you’re a librarian at an R1 institution in the US, I’ll likely be emailing you soon to ask you to participate in our survey on altmetrics and libraries.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

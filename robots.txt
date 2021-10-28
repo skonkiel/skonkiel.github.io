@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://skonkiel.github.io/sitemap.xml

@@ -1,0 +1,1283 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Stacy Konkiel" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner and alias (coming soon!) Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://skonkiel.github.io/minneapolis-landlords/" />
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#5078c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.4598bbd27abfde1408ba29fb79d9fc17.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://skonkiel.github.io/minneapolis-landlords/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Stacy R Konkiel" />
+  <meta property="og:url" content="https://skonkiel.github.io/minneapolis-landlords/" />
+  <meta property="og:title" content="Minneapolis landlord dataset and dashboard | Stacy R Konkiel" />
+  <meta property="og:description" content="Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner and alias (coming soon!) Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit." /><meta property="og:image" content="https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2021-10-28T00:00:37&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-10-28T00:00:37&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://skonkiel.github.io/minneapolis-landlords/"
+  },
+  "headline": "Minneapolis landlord dataset and dashboard",
+  
+  "datePublished": "2021-10-28T00:00:37Z",
+  "dateModified": "2021-10-28T00:00:37Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Stacy Konkiel"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Stacy R Konkiel",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Download the 2020 Minneapolis landlord dataset: properties owned, aliases, valuation, and more Searchable landlord dashboard: Search based on owner and alias (coming soon!) Vote yes on 3, yes on rent control for Minneapolis on November 2  Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Minneapolis landlord dataset and dashboard | Stacy R Konkiel</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="2c8bd9bcb635c85d8d0b1b082f7edd72" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Stacy R Konkiel</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Stacy R Konkiel</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Minneapolis landlord dataset and dashboard</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 28, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/general/">General</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <ul>
+<li><a href="https://github.com/skonkiel/mpls_landlords" target="_blank" rel="noopener">Download the 2020 Minneapolis landlord dataset</a>: properties owned, aliases, valuation, and more</li>
+<li><a href="#">Searchable landlord dashboard</a>: Search based on owner and alias (coming soon!)</li>
+<li><a href="https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/" target="_blank" rel="noopener">Vote yes on 3, yes on rent control for Minneapolis on November 2</a></li>
+</ul>
+<p>Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit.</p>
+<p>After a frustrating experience trying to buy my first home last year&ndash;and disappointment in the pushback against the 2021 Minneapolis ballot question on rent control&ndash;I thought I&rsquo;d provide a data-driven analysis of the scale of profiteering that&rsquo;s happening on the backs of the average Minneapolis renter, which is at the same time making it harder for people like me to buy a home.</p>
+<p>As a former renter, I also want to provide a dataset to other renters and advocacy groups that makes it a lot easier to find out who owns rental properties in your neighborhood.</p>
+<p>What follows is a back of napkin analysis underpinned by a (much more valuable) public dataset of Minneapolis landlords from 2020, which I&rsquo;ve put a LOT of time into cleaning and normalizing.</p>
+<p>Read on and then VOTE YES ON 3.</p>
+<h2 id="fighting-the-llc-problem-through-data-munging">Fighting the &ldquo;LLC problem&rdquo; through data munging</h2>
+<p>Inspiration for this project comes from <a href="https://findmylandlord.chicagodsa.org/" target="_blank" rel="noopener">Find My Landlord website</a>, which aims to connect Chicago landlords to the shell companies and LLCs they use to avoid liability and, in some cases, accountability.</p>
+<p>As that project so expertly illustrates, there&rsquo;s a well known &ldquo;LLC problem&rdquo; among housing advocates who want to learn who owns a building. Individuals and corporations that own many buildings at once tend to protect their assets by creating different LLCs for each building they own, so if they get sued, only that building is &ldquo;in danger&rdquo;. They sometimes even file taxes under multiple business names in order to obsfucate the fact that they own multiple rental properties. (Read on for an example of this in action.)</p>
+<p>To help local housing advocates overcome the LLC problem, I decided to do some hard-core data munging. I downloaded Assessor Parcel data for 2020 from the <a href="https://opendata.minneapolismn.gov/" target="_blank" rel="noopener">Open Minneapolis</a> portal. This file lists the owners, taxpayers, value, and characteristics of all Minneapolis parcels and buildings.</p>
+<p>I cleaned the hell out of the data and then applied some techniques* in <a href="https://openrefine.org/" target="_blank" rel="noopener">Open Refine</a> to find common owners of properties that were registered to many different LLCs and, in some cases, family members. I also ran an analysis on the results, which I share the headline findings of below.</p>
+<p>Disclaimer: This data was manually reviewed and cleaned to the best of my ability. There may be mistakes and/or omissions.</p>
+<h2 id="what-the-data-reveals">What the data reveals</h2>
+<h3 id="one-in-five-single-family-minneapolis-homes-is-rented-for-profit">One in five single family Minneapolis homes is rented for profit</h3>
+<p>Of the 74,689 single-family homes in Minneapolis, 13,572 are rental properties. 2,545 of these rental properties are owned by what I&rsquo;ll call &ldquo;corporate landlords&rdquo;—those who own four or more rental properties, who make a living off of renters. These are properties that could otherwise be on the market to would-be buyers who are having <a href="https://minnesota.cbslocal.com/2021/09/21/twin-cities-housing-shortage/" target="_blank" rel="noopener">a hell of a time finding houses</a>, especially lower-income buyers who are currently priced out of the market.</p>
+<h3 id="minneapolis-landlords-are-hiding-their-identities-to-an-alarming-extent">Minneapolis landlords are hiding their identities to an alarming extent</h3>
+<p>There are 852 Minneapolis landlords who have registered their properties to multiple organizations: 2,961 third-parties (typically LLCs and family members) total, in many cases hiding their ownership from tenants.</p>
+<p>Here&rsquo;s an example of this trickery in action—many different LLCs registered to a single family of rental property owners:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Aliases of one family" srcset="
+               /media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_3dca584a32d2122a5391524ac21b5d4b.png 400w,
+               /media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_e0c3930994b6e88b1b40a33f0cd42a66.png 760w,
+               /media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_1200x1200_fit_lanczos_3.png 1200w"
+               src="/media/aliases_hu4dc075f5b568cc03b3e35966d97b7a51_120483_3dca584a32d2122a5391524ac21b5d4b.png"
+               width="548"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>This purposeful obsfucation <a href="https://www.startribune.com/north-minneapolis-renters-wage-a-fight-with-private-equity-landlords/600062754/" target="_blank" rel="noopener">makes it difficult for tenants to hold owners accountable</a>. How is this legal?</p>
+<h3 id="private-equity-and-local-profiteers-are-making-a-killing-on-minneapolis-renters">Private equity and local profiteers are making a killing on Minneapolis renters</h3>
+<p>The top twenty landlords (by number of properties owned) collectively own over 1,600 rental properties in Minneapolis.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Top 20 rental property owners" srcset="
+               /media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_8daeeae7178873f791d4d3cb54c8f0b3.png 400w,
+               /media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_97d144b46c4704da4cbc1a72a33548ba.png 760w,
+               /media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_1200x1200_fit_lanczos_3.png 1200w"
+               src="/media/top_landlords_hud9e8ec30f200bb512ada0ff485be7933_70987_8daeeae7178873f791d4d3cb54c8f0b3.png"
+               width="760"
+               height="263"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Though some of the top property owners are nonprofits like Project for Pride in Living, more often they are companies like Front Yard Residential Corporation and investment funds like Carpathain Capital Management.</p>
+<p>Collectively, Minneapolis landlords collect rent on 114,203 rental units across the city. With an average rent of $1,455, that&rsquo;s a whopping $166 million exiting renters pockets each month and going to landlords, rather than one&rsquo;s own mortgage.</p>
+<h3 id="the-working-class-cant-build-wealth-if-minneapolis-landlords-own-all-the-property">The working class can&rsquo;t build wealth if Minneapolis landlords own all the property</h3>
+<p>Home ownership is an excellent way for families to build wealth. Disparities in wealth along racial lines are often tied to similar disparities in homeownership rates, which in Minneapolis were historically caused by <a href="https://www.minnpost.com/metro/2019/02/with-covenants-racism-was-written-into-minneapolis-housing-the-scars-are-still-visible/" target="_blank" rel="noopener">racist redlining practices</a>.</p>
+<p>With that in mind, consider this: Minneapolis landlords own rental properties worth more than $19 billion dollars (as valued by the city&rsquo;s assessor office). Imagine if some of those properties could be owned by families instead! It could go a long way towards addressing inequity.</p>
+<h3 id="mom-and-pop-landlords-shouldnt-be-let-off-the-hook">&ldquo;Mom and pop&rdquo; landlords shouldn&rsquo;t be let off the hook</h3>
+<p>11,027 single family homes that could otherwise be owned by their residents are instead owned by so-called &ldquo;mom and pop&rdquo; landlords that own three or fewer properties. Only 39 of these single family homes are arguably <em>truly</em> mom and pop-owned—that is, rented out by someone who also lives on the property.</p>
+<h2 id="vote-yes-on-3---rent-control-for-minneapolis">Vote Yes on 3 - Rent Control for Minneapolis</h2>
+<p>Minneapolis heads to the polls next Tuesday, November 2 to decide on rent control and other important ballot questions.</p>
+<p>We know that <a href="https://jacobinmag.com/2019/11/rent-control-housing-crisis-affordability-supply" target="_blank" rel="noopener">rent control works</a>. We just need voters to support the measure at the ballot box.</p>
+<p>If you&rsquo;re as frustrated as I am by the extent to which landlords are winning out over the rest of us, go vote.</p>
+<p>Same day voter registration is available, as is early voting. Check out the <a href="https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/" target="_blank" rel="noopener">Election Links at the top of the Star Tribune&rsquo;s election guide</a> for info on registration, finding your polling place, and more.</p>
+<h2 id="dig-into-the-data">Dig into the data</h2>
+<p>I&rsquo;ve archived on Github <a href="https://github.com/skonkiel/mpls_landlords" target="_blank" rel="noopener">a derivative of the 2020 Minneapolis Assessor Parcel dataset that includes rental properties, their likely owners, and the aliases they use</a>. You can download it as a spreadsheet by following <a href="https://github.com/skonkiel/mpls_landlords/blob/master/data/final_landlords.csv" target="_blank" rel="noopener">this link</a>. <!-- You can also search for owners of a particular address or alias in this dashboard. --></p>
+<p>I&rsquo;ve removed owners' addresses from the dataset because doxxing is bad karma. If you need to find contact information for a specific LLC that owns a rental property in order to advocate for yourself or others, <a href="OpenCorporates.com">OpenCorporates</a> is a great resource. Use the information responsibly.</p>
+<p>As I mention above, I make no promises to the accuracy of the data, though I&rsquo;ve tried my best. Caveat emptor.</p>
+<p>The data (as well as my analyses above) includes nonprofit owners of rental properties, as well as &ldquo;mom and pop&rdquo; landlords. Public housing has been removed from the dataset (though it&rsquo;s worth noting that only a fraction of rental units (5,700) are city or county owned).</p>
+<p>I&rsquo;ll update this post again soon to include a link to the analysis, for those who want to check my numbers.</p>
+<p>* Revealing my technieques publicly could help shifty landlords hide their identities better in the future. Get in touch via <a href="mailto:hello@stacykonkiel.org">email</a> if you&rsquo;re a housing advocate who wants to learn more!</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://skonkiel.github.io/minneapolis-landlords/&amp;text=Minneapolis%20landlord%20dataset%20and%20dashboard" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://skonkiel.github.io/minneapolis-landlords/&amp;t=Minneapolis%20landlord%20dataset%20and%20dashboard" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Minneapolis%20landlord%20dataset%20and%20dashboard&amp;body=https://skonkiel.github.io/minneapolis-landlords/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://skonkiel.github.io/minneapolis-landlords/&amp;title=Minneapolis%20landlord%20dataset%20and%20dashboard" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Minneapolis%20landlord%20dataset%20and%20dashboard%20https://skonkiel.github.io/minneapolis-landlords/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://skonkiel.github.io/minneapolis-landlords/&amp;title=Minneapolis%20landlord%20dataset%20and%20dashboard" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://skonkiel.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu4fb13b5645ef96501aecad8ede316c59_52193_270x270_fill_q75_lanczos_center.jpg" alt="Stacy Konkiel"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://skonkiel.github.io/">Stacy Konkiel</a></h5>
+      <h6 class="card-subtitle">Data wrangler 🤠</h6>
+      <p class="card-text">Stacy Konkiel is a data analyst.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:hello@stacykonkiel.org" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/stacykonkiel/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/skonkiel" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-0546-8257" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/skonkiel" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

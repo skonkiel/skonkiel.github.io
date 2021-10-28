@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Humanities | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/tag/humanities/</link>
+      <atom:link href="https://skonkiel.github.io/tag/humanities/index.xml" rel="self" type="application/rss+xml" />
+    <description>Humanities</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png</url>
+      <title>Humanities</title>
+      <link>https://skonkiel.github.io/tag/humanities/</link>
+    </image>
+    
+    <item>
+      <title>Approaches to creating ‘humane’ research evaluation metrics for the humanities</title>
+      <link>https://skonkiel.github.io/publication/konkiel-approaches-2018/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/publication/konkiel-approaches-2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

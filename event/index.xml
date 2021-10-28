@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks | Stacy R Konkiel</title>
+    <link>https://skonkiel.github.io/event/</link>
+      <atom:link href="https://skonkiel.github.io/event/index.xml" rel="self" type="application/rss+xml" />
+    <description>Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://skonkiel.github.io/media/icon_hu52a5aca58776a3b1d7435a33538a8918_904_512x512_fill_lanczos_center_3.png</url>
+      <title>Talks</title>
+      <link>https://skonkiel.github.io/event/</link>
+    </image>
+    
+    <item>
+      <title>Altmetrics: The state of the art for publication planning</title>
+      <link>https://skonkiel.github.io/talk/altmetrics-the-state-of-the-art-for-publication-planning/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/altmetrics-the-state-of-the-art-for-publication-planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data-intensive approaches to finding and predicting research outcomes for New Zealand health research</title>
+      <link>https://skonkiel.github.io/talk/data-intensive-approaches-to-finding-and-predicting-research-outcomes-for-new-zealand-health-research/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/data-intensive-approaches-to-finding-and-predicting-research-outcomes-for-new-zealand-health-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Working with the Dimensions and Altmetric APIs to search, visualize, and integrate research information across library systems</title>
+      <link>https://skonkiel.github.io/talk/working-with-the-dimensions-and-altmetric-apis-to-search-visualize-and-integrate-research-information-across-library-systems/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/working-with-the-dimensions-and-altmetric-apis-to-search-visualize-and-integrate-research-information-across-library-systems/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Measuring knowledge mobilization for Nordic research using patent and policy indicators</title>
+      <link>https://skonkiel.github.io/talk/measuring-knowledge-mobilization-for-nordic-research-using-patent-and-policy-indicators/</link>
+      <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skonkiel.github.io/talk/measuring-knowledge-mobilization-for-nordic-research-using-patent-and-policy-indicators/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
