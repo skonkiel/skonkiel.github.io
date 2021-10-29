@@ -20,6 +20,7 @@
       <description>&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/skonkiel/mpls_landlords&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download the 2020 Minneapolis landlord dataset&lt;/a&gt;: properties owned, aliases, valuation, and more&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://public.tableau.com/views/MinneapolisAssessorData2020-Landlords/Dashboard2?:language=en-US&amp;amp;publish=yes&amp;amp;:display_count=n&amp;amp;:origin=viz_share_link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Searchable landlord dashboard&lt;/a&gt;: Search based on owner name, alias, and address&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/skonkiel/mpls_landlords/blob/master/Summary.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Minneapolis landlord analysis&lt;/a&gt;: Dig into my analysis&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.startribune.com/minneapolis-voter-guide-mayor-city-council-candidates-ward-2021-election-charter-amendments/600096731/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Vote yes on 3, yes on rent control for Minneapolis on November 2&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Homeownership is increasingly out of reach for the average Minnesotan, especially in Minneapolis, where one in five single family homes is rented for profit.&lt;/p&gt;
@@ -116,7 +117,7 @@
 &lt;p&gt;I&amp;rsquo;ve removed owners&#39; addresses from the dataset because doxxing is bad karma. If you need to find contact information for a specific LLC that owns a rental property in order to advocate for yourself or others, &lt;a href=&#34;https://www.OpenCorporates.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OpenCorporates&lt;/a&gt; is a great resource. The &lt;a href=&#34;https://opendata.minneapolismn.gov/datasets/assessors-parcel-data-2020/explore&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;source dataset&lt;/a&gt; also includes a wealth of information on specific properties. Use this information responsibly.&lt;/p&gt;
 &lt;p&gt;As I mention above, I make no promises to the accuracy of the data, though I&amp;rsquo;ve tried my best. Caveat emptor.&lt;/p&gt;
 &lt;p&gt;The data (as well as my analyses above) includes nonprofit owners of rental properties, as well as &amp;ldquo;mom and pop&amp;rdquo; landlords and some co-ops. Public housing has been removed from the dataset (though it&amp;rsquo;s worth noting that only a fraction of rental units (5,700) are city or county owned).&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll update this post again soon to include a link to the analysis, for those who want to check my numbers.&lt;/p&gt;
+&lt;p&gt;For more info on my analysis of the landlord data, &lt;a href=&#34;https://github.com/skonkiel/mpls_landlords/blob/master/Summary.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;visit Github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;* Revealing my techniques publicly could help shifty landlords hide their identities better in the future. I&amp;rsquo;m happy to share them privately, though! Get in touch via &lt;a href=&#34;mailto:hello@stacykonkiel.org&#34;&gt;email&lt;/a&gt; if you&amp;rsquo;re a housing advocate who wants to learn more.&lt;/p&gt;
 </description>
     </item>
