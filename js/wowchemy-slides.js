@@ -9,14 +9,21 @@
     for (let i = 0; i < mermaids.length; i++) {
       let mermaidCodeElement = mermaids[i];
       let newElement = document.createElement("div");
-      newElement.innerHTML = mermaidCodeElement.innerHTML;
+      const mermaidContent = mermaidCodeElement.textContent;
+      newElement.textContent = mermaidContent;
       newElement.classList.add("mermaid");
       if (render) {
-        window.mermaid.mermaidAPI.render(`mermaid-${i}`, newElement.textContent, function(svgCode) {
-          newElement.innerHTML = svgCode;
+        window.mermaid.mermaidAPI.render(`mermaid-${i}`, mermaidContent, function(svgCode) {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = svgCode;
+          const svg = tempDiv.querySelector('svg');
+          if (svg) {
+            newElement.textContent = '';
+            newElement.appendChild(svg);
+          }
         });
       }
-      mermaidCodeElement.parentNode.replaceWith(newElement);
+      mermaidCodeElement.parentNode.replaceChild(newElement, mermaidCodeElement);
     }
     console.debug(`Processed ${mermaids.length} Mermaid code blocks`);
   }
