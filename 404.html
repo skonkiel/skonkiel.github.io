@@ -194,22 +194,6 @@
 
       
       
-
-      
-    
-      
-      
-
-      
-      
-
-      
-    
-      
-      
-
-      
-      
         
       
 
@@ -642,8 +626,14 @@
 
   
   
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  <form class="d-flex align-items-center mb-3" id="search_form" method="GET" action="/search">
+    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off" 
+           data-validation-type="search" 
+           pattern="[^<>{}]*" 
+           title="Search query cannot contain special characters"
+           required
+           minlength="2"
+           maxlength="50">
   </form>
   
 
@@ -852,3 +842,13 @@
 
 </body>
 </html>
+
+<script src="/js/form-security.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('search_form');
+    if (searchForm) {
+      FormSecurity.init(searchForm);
+    }
+  });
+</script>
